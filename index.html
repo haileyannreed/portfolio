@@ -28,6 +28,7 @@
       text-align: left;
       border-right: 4px solid #695a57;
       box-sizing: border-box;
+      justify-content: space-between;
     }
     .sidebar img.profile-pic {
       width: 250px;
@@ -38,7 +39,6 @@
     }
     .sidebar img.sidebar-logo {
       width: 150px;
-      margin-top: 1rem;
       margin-bottom: 1rem;
       align-self: center;
     }
@@ -47,6 +47,7 @@
       color: #695a57;
       margin-left: 2rem;
       font-size: 2rem;
+      align-self: flex-start;
     }
     .sidebar nav ul {
       list-style: none;
@@ -184,17 +185,19 @@
 </head>
 <body>
   <aside class="sidebar">
-    <h1>Hailey Reed</h1>
-    <img src="images/withborder.png" alt="Profile Picture" class="profile-pic" />
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="resume.pdf" target="_blank">Resume</a></li>
-      </ul>
-    </nav>
+    <div>
+      <h1>Hailey Reed</h1>
+      <img src="images/withborder.png" alt="Profile Picture" class="profile-pic" />
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
     <img src="images/sidebarlogo.png" alt="Sidebar Logo" class="sidebar-logo" />
   </aside>
 
@@ -244,4 +247,5 @@
   </div>
 </body>
 </html>
+
 
