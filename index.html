@@ -36,28 +36,29 @@
     }
     .sidebar p {
       font-size: 0.9rem;
+      margin-bottom: 2rem;
     }
-    .main-content {
-      margin-left: 250px;
-      padding: 2rem;
-      flex: 1;
-    }
-    nav ul {
+    .sidebar nav ul {
       list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
       padding: 0;
-      justify-content: center;
+      text-align: left;
     }
-    nav ul li a {
+    .sidebar nav ul li {
+      margin: 1rem 0;
+    }
+    .sidebar nav ul li a {
       color: #4a90e2;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
-    nav ul li a:hover {
+    .sidebar nav ul li a:hover {
       color: #2c5dad;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+      flex: 1;
     }
     .project-card {
       background-color: #f0f4f8;
@@ -76,12 +77,12 @@
     .project-card a:hover {
       text-decoration: underline;
     }
-    ul {
+    ul.skill-list {
       list-style: none;
       padding: 0;
       text-align: center;
     }
-    ul li {
+    ul.skill-list li {
       display: inline-block;
       background-color: #e1ecf4;
       margin: 0.5rem;
@@ -107,9 +108,6 @@
     <img src="images/headshot_logo.png" alt="Profile Picture" />
     <h1>Hailey Reed</h1>
     <p>Junior Computer Science Major<br/>AI Concentration | Math Minor</p>
-  </aside>
-
-  <div class="main-content">
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -119,7 +117,9 @@
         <li><a href="resume.pdf" target="_blank">Resume</a></li>
       </ul>
     </nav>
+  </aside>
 
+  <div class="main-content">
     <section id="about">
       <h2>About Me</h2>
       <p>Hi, I’m Hailey Reed! I'm a junior Computer Science major with a concentration in AI and a minor in Mathematics.</p>
@@ -146,7 +146,7 @@
 
     <section id="skills">
       <h2>💻 Skills and Proficiencies</h2>
-      <ul>
+      <ul class="skill-list">
         <li>Python</li>
         <li>SQL</li>
         <li>PyTorch</li>
