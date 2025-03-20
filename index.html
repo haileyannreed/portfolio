@@ -27,6 +27,7 @@
       align-items: flex-start;
       text-align: left;
       border-right: 4px solid #695a57;
+      box-sizing: border-box;
     }
     .sidebar img.profile-pic {
       width: 250px;
@@ -42,10 +43,10 @@
       align-self: center;
     }
     .sidebar h1 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
       color: #695a57;
       margin-left: 2rem;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
     .sidebar nav ul {
       list-style: none;
@@ -54,13 +55,13 @@
       text-align: left;
     }
     .sidebar nav ul li {
-      margin: 1rem 0;
+      margin: 1.5rem 0;
     }
     .sidebar nav ul li a {
       color: #695a57;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       transition: color 0.3s ease;
     }
     .sidebar nav ul li a:hover {
@@ -118,6 +119,13 @@
       color: #000;
       text-decoration: underline;
     }
+    .divider {
+      border-left: 4px solid #695a57;
+      height: 100vh;
+      position: fixed;
+      left: 500px;
+      top: 0;
+    }
 
     @media (max-height: 700px) {
       .sidebar img.sidebar-logo {
@@ -141,6 +149,9 @@
         align-items: center;
         text-align: center;
         border-right: none;
+      }
+      .divider {
+        display: none;
       }
       .sidebar img.profile-pic {
         width: 80px;
@@ -186,6 +197,8 @@
     </nav>
     <img src="images/sidebarlogo.png" alt="Sidebar Logo" class="sidebar-logo" />
   </aside>
+
+  <div class="divider"></div>
 
   <div class="main-content">
     <section id="about">
