@@ -27,11 +27,15 @@
       align-items: center;
       text-align: center;
     }
-    .sidebar img {
+    .sidebar img.profile-pic {
       width: 250px;
       border-radius: 50%;
       margin-bottom: 1rem;
       object-fit: cover;
+    }
+    .sidebar img.sidebar-logo {
+      width: 150px;
+      margin-top: 2rem;
     }
     .sidebar h1 {
       margin-bottom: 0.5rem;
@@ -125,9 +129,12 @@
         justify-content: space-around;
         padding: 1rem;
       }
-      .sidebar img {
+      .sidebar img.profile-pic {
         width: 80px;
         margin-bottom: 0;
+      }
+      .sidebar img.sidebar-logo {
+        width: 80px;
       }
       .sidebar h1 {
         margin-left: 0;
@@ -152,7 +159,7 @@
 <body>
   <aside class="sidebar">
     <h1>Hailey Reed</h1>
-    <img src="images/withborder.png" alt="Profile Picture" />
+    <img src="images/withborder.png" alt="Profile Picture" class="profile-pic" />
     <div>
       <p>Junior Computer Science Major<br/>AI Concentration | Math Minor</p>
       <nav>
@@ -165,6 +172,7 @@
         </ul>
       </nav>
     </div>
+    <img src="images/sidebarlogo.png" alt="Sidebar Logo" class="sidebar-logo" />
   </aside>
 
   <div class="main-content">
