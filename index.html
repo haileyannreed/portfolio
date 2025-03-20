@@ -24,32 +24,37 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
+      border-right: 4px solid #695a57;
     }
     .sidebar img.profile-pic {
       width: 250px;
       border-radius: 50%;
       margin-bottom: 1rem;
       object-fit: cover;
+      align-self: center;
     }
     .sidebar img.sidebar-logo {
       width: 150px;
       margin-top: 2rem;
+      align-self: center;
     }
     .sidebar h1 {
       margin-bottom: 0.5rem;
       color: #695a57;
-      align-self: center;
-      margin-left: 0;
+      margin-left: 2rem;
+      font-size: 1.8rem;
     }
     .sidebar p {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
+      margin-left: 2rem;
     }
     .sidebar nav ul {
       list-style: none;
       padding: 0;
+      margin-left: 2rem;
       text-align: left;
     }
     .sidebar nav ul li {
@@ -59,6 +64,7 @@
       color: #695a57;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1rem;
       transition: color 0.3s ease;
     }
     .sidebar nav ul li a:hover {
@@ -128,6 +134,9 @@
         flex-direction: row;
         justify-content: space-around;
         padding: 1rem;
+        align-items: center;
+        text-align: center;
+        border-right: none;
       }
       .sidebar img.profile-pic {
         width: 80px;
@@ -139,12 +148,18 @@
       .sidebar h1 {
         margin-left: 0;
         align-self: center;
+        font-size: 1.5rem;
       }
       .sidebar nav ul {
         display: flex;
         flex-direction: row;
         gap: 1rem;
         text-align: center;
+        margin-left: 0;
+      }
+      .sidebar p {
+        margin-left: 0;
+        font-size: 1rem;
       }
       .main-content {
         margin-left: 0;
