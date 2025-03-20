@@ -12,17 +12,35 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #fdfdfd;
       color: #333;
-    }
-    header {
-      background-color: #4a90e2;
-      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
     }
-    nav h1 {
-      font-size: 1.8rem;
+    .sidebar {
+      width: 250px;
+      background-color: #4a90e2;
+      color: #fff;
+      padding: 2rem 1rem;
+      position: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .sidebar img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .sidebar h1 {
+      margin-bottom: 0.5rem;
+    }
+    .sidebar p {
+      font-size: 0.9rem;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+      flex: 1;
     }
     nav ul {
       list-style: none;
@@ -30,31 +48,16 @@
       gap: 1rem;
       margin: 0;
       padding: 0;
+      justify-content: center;
     }
     nav ul li a {
-      color: #fff;
+      color: #4a90e2;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
     nav ul li a:hover {
-      color: #dcdcdc;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .profile-pic {
-      width: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: 1rem auto;
-    }
-    h2 {
-      color: #4a90e2;
-      text-align: center;
-      margin-top: 1rem;
+      color: #2c5dad;
     }
     .project-card {
       background-color: #f0f4f8;
@@ -100,9 +103,14 @@
   </style>
 </head>
 <body>
-  <header>
+  <aside class="sidebar">
+    <img src="images/headshot_logo.png" alt="Profile Picture" />
+    <h1>Hailey Reed</h1>
+    <p>Junior Computer Science Major<br/>AI Concentration | Math Minor</p>
+  </aside>
+
+  <div class="main-content">
     <nav>
-      <h1>Hailey Reed</h1>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -111,48 +119,47 @@
         <li><a href="resume.pdf" target="_blank">Resume</a></li>
       </ul>
     </nav>
-  </header>
 
-  <section id="about">
-    <img src="images/headshot_logo.png" alt="Profile Picture" class="profile-pic" />
-    <h2>About Me</h2>
-    <p>Hi, I’m Hailey Reed! I'm a junior Computer Science major with a concentration in AI and a minor in Mathematics.</p>
-  </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I’m Hailey Reed! I'm a junior Computer Science major with a concentration in AI and a minor in Mathematics.</p>
+    </section>
 
-  <section id="education">
-    <h2>🎓 Education</h2>
-    <p>B.S. Computer Science | University of Connecticut (May 2026)</p>
-  </section>
+    <section id="education">
+      <h2>🎓 Education</h2>
+      <p>B.S. Computer Science | University of Connecticut (May 2026)</p>
+    </section>
 
-  <section id="projects">
-    <h2>🚀 Projects</h2>
-    <div class="project-card">
-      <h3>Honors Project</h3>
-      <p>Representation and Analysis of Search Algorithms.</p>
-      <a href="https://github.com/haileyannreed/yourproject">View on GitHub</a>
-    </div>
-    <div class="project-card">
-      <h3>Few-Shot Learning Research</h3>
-      <p>Improving Image Segmentation using Few-Shot Learning Techniques.</p>
-      <a href="https://github.com/haileyannreed/yourresearch">View on GitHub</a>
-    </div>
-  </section>
+    <section id="projects">
+      <h2>🚀 Projects</h2>
+      <div class="project-card">
+        <h3>Honors Project</h3>
+        <p>Representation and Analysis of Search Algorithms.</p>
+        <a href="https://github.com/haileyannreed/yourproject">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Few-Shot Learning Research</h3>
+        <p>Improving Image Segmentation using Few-Shot Learning Techniques.</p>
+        <a href="https://github.com/haileyannreed/yourresearch">View on GitHub</a>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>💻 Skills and Proficiencies</h2>
-    <ul>
-      <li>Python</li>
-      <li>SQL</li>
-      <li>PyTorch</li>
-      <li>Java</li>
-      <li>NetworkX</li>
-      <li>Matplotlib</li>
-      <li>Git</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>💻 Skills and Proficiencies</h2>
+      <ul>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>PyTorch</li>
+        <li>Java</li>
+        <li>NetworkX</li>
+        <li>Matplotlib</li>
+        <li>Git</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed">LinkedIn</a></p>
-  </footer>
+    <footer>
+      <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed">LinkedIn</a></p>
+    </footer>
+  </div>
 </body>
 </html>
