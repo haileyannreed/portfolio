@@ -68,11 +68,41 @@
     margin-left: 5px;
     vertical-align: middle;
     }
-
-
     body {
       padding-top: 70px;
       }
+.contact-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 3rem;
+}
+
+.contact-photo img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.contact-info h2 {
+  color: #695a57;
+  margin-bottom: 1rem;
+}
+
+.contact-info a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
 
   </style>
 </head>
@@ -92,4 +122,17 @@
         </nav>
       </div>
     </header>
+
+  <main class="contact-main">
+  <div class="contact-photo">
+    <img src="images/withborder.png" alt="Hailey Reed Headshot" />
+  </div>
+  <div class="contact-info">
+    <h2>Contact Me</h2>
+    <p><strong>Email:</strong> hailey.reed@example.com</p>
+    <p><strong>Phone:</strong> (123) 456-7890</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hailey-ann-reed/" target="_blank">linkedin.com/in/hailey-ann-reed</a></p>
+  </div>
+</main>
+
 </body>
