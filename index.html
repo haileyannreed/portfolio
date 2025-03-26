@@ -17,6 +17,39 @@
       .main-content h2, .main-content h3 {
         color: #695a57;
       }
+    .top-nav {
+      width: 100%;
+      background-color: #e4e2dd;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 4px solid #695a57;
+      box-sizing: border-box;
+      }
+    .top-nav nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 2rem;
+      }
+    .top-nav nav ul li a {
+      text-decoration: none;
+      color: #695a57;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      }
+    .top-nav nav ul li a:hover {
+      color: #000;
+      }
+    body {
+      padding-top: 70px;
+      }
+
     .sidebar {
       width: 500px;
       background-color: #e4e2dd;
@@ -31,7 +64,7 @@
       border-right: 4px solid #695a57;
       box-sizing: border-box;
       justify-content: space-between;
-    }
+      }
     .sidebar img.profile-pic {
       width: 250px;
       border-radius: 50%;
@@ -40,72 +73,71 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
-
-    }
+      }
     .sidebar img.sidebar-logo {
       width: 150px;
       margin-bottom: 2rem;
       align-self: center;
-    }
+      }
     .sidebar h1 {
       margin-bottom: 2rem;
       color: #695a57;
       margin-left: 2rem;
       font-size: 2rem;
       align-self: flex-start;
-    }
+      }
     .sidebar nav ul {
       list-style: none;
       padding: 0;
       margin-left: 2rem;
       text-align: left;
-    }
+      }
     .sidebar nav ul li {
       margin: 1rem 0;
-    }
+      }
     .sidebar nav ul li a {
       color: #695a57;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.2rem;
       transition: color 0.3s ease;
-    }
+      }
     .sidebar nav ul li a:hover {
       color: #000;
-    }
+      }
     .main-content {
       margin-left: 520px;
       padding: 2rem 3rem;
       flex: 1;
-    }
+      }
     .main-content h2, .main-content h3 {
       color: #695a57;
-    }
+      }
     .main-content section p {
       margin-left: 2rem;
-    }
+      }
     .project-card {
       background-color: #f0f4f8;
       padding: 1rem;
       margin: 1rem 0;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+      }
     .project-card a {
       display: inline-block;
       margin-top: 0.5rem;
       color: #4a90e2;
       text-decoration: none;
       font-weight: bold;
-    }
+      }
     .project-card a:hover {
       text-decoration: underline;
-    }
+      }
     ul.skill-list {
       list-style: none;
       padding: 0;
       text-align: center;
-    }
+      }
     ul.skill-list li {
       display: inline-block;
       background-color: #e1ecf4;
@@ -113,31 +145,31 @@
       padding: 0.5rem 1rem;
       border-radius: 20px;
       font-size: 0.95rem;
-    }
+      }
     footer {
       background-color: #e4e2dd;
       color: #000;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
-    }
+      }
     footer a {
       color: #000;
       text-decoration: underline;
-    }
+      }
     .divider {
       border-left: 4px solid #695a57;
       height: 100vh;
       position: fixed;
       left: 500px;
       top: 0;
-    }
+      }
     .skills-box {
         background-color: #f0f4f8; /* soft neutral blue or adjust as needed */
         padding: 1rem;
         border-radius: 12px;
         margin-top: 1rem;
-      }
+        }
 
     @media (max-height: 700px) {
       .sidebar img.sidebar-logo {
@@ -208,6 +240,20 @@
   </style>
 </head>
 <body>
+  
+    <!-- Bar Menu on the TOP of the Page -->
+    <header class="top-nav">
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#data-analytics">Portfolio</a></li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu on the Left Sidebar -->
   <aside class="sidebar">
     <div>
       <h1>Hailey Reed | Portfolio</h1>
@@ -220,7 +266,6 @@
           <li><a href="#data-analysis">Data Analysis</a></li>
           <li><a href="#data-visualization">Data Visualization</a></li>
           <li><a href="#skills">Additional Skills</a></li>
-          <li><a href="resume.pdf" target="_blank">Resume</a></li>
         </ul>
       </nav>
     </div>
@@ -229,6 +274,7 @@
 
   <div class="divider"></div>
 
+<!-- Main Content -->
 <div class="main-content">
   <section id="data-analytics">
     <h2>Data Analytics</h2>
@@ -250,8 +296,6 @@
     </ul>
   </div>
 </section>
-
-
 
 <section id="data-storage">
   <h3>2. Data Storage</h3>
