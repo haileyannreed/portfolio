@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hailey Reed | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      display: flex;
+      flex-direction: row;
+      .main-content h2, .main-content h3 {
+        color: #695a57;
+      }
+.top-nav {
+  width: 100%;
+  background-color: #e4e2dd;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 4px solid #695a57;
+  box-sizing: border-box;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #695a57;
+}
+
+.top-nav nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.top-nav nav ul li a {
+  text-decoration: none;
+  color: #695a57;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.top-nav nav ul li a:hover {
+  color: #000;
+}
+  .pdf-tag {
+    background-color: #695a57;
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-left: 5px;
+    vertical-align: middle;
+    }
+
+
+    body {
+      padding-top: 70px;
+      }
+
+  </style>
+</head>
+<body>
+
+    <!-- Bar Menu on the TOP of the Page -->
+    <header class="top-nav">
+      <div class="nav-container">
+        <div class="nav-title">Hailey Reed</div>
+        <nav>
+          <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Resume.pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+</body>
