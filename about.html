@@ -2,37 +2,296 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me | Hailey Reed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hailey Reed | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      display: flex;
+      flex-direction: row;
+      .main-content h2, .main-content h3 {
+        color: #695a57;
+      }
+.top-nav {
+  width: 100%;
+  background-color: #e4e2dd;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 4px solid #695a57;
+  box-sizing: border-box;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #695a57;
+}
+
+.top-nav nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.top-nav nav ul li a {
+  text-decoration: none;
+  color: #695a57;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.top-nav nav ul li a:hover {
+  color: #000;
+}
+
+    body {
+      padding-top: 70px;
+      }
+
+    .sidebar {
+      width: 500px;
+      background-color: #e4e2dd;
+      color: #000000;
+      padding: 2rem 1rem;
+      position: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      border-right: 4px solid #695a57;
+      box-sizing: border-box;
+      justify-content: space-between;
+      }
+    .sidebar img.profile-pic {
+      width: 250px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      }
+    .sidebar img.sidebar-logo {
+      width: 150px;
+      margin-bottom: 2rem;
+      align-self: center;
+      }
+    .sidebar h1 {
+      margin-bottom: 2rem;
+      color: #695a57;
+      margin-left: 2rem;
+      font-size: 2rem;
+      align-self: flex-start;
+      }
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin-left: 2rem;
+      text-align: left;
+      }
+    .sidebar nav ul li {
+      margin: 1rem 0;
+      }
+    .sidebar nav ul li a {
+      color: #695a57;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+      }
+    .sidebar nav ul li a:hover {
+      color: #000;
+      }
+    .main-content {
+      margin-left: 520px;
+      padding: 2rem 3rem;
+      flex: 1;
+      }
+    .main-content h2, .main-content h3 {
+      color: #695a57;
+      }
+    .main-content section p {
+      margin-left: 2rem;
+      }
+    .project-card {
+      background-color: #f0f4f8;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: bold;
+      }
+    .project-card a:hover {
+      text-decoration: underline;
+      }
+    ul.skill-list {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      }
+    ul.skill-list li {
+      display: inline-block;
+      background-color: #e1ecf4;
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      }
+    footer {
+      background-color: #e4e2dd;
+      color: #000;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      }
+    footer a {
+      color: #000;
+      text-decoration: underline;
+      }
+    .divider {
+      border-left: 4px solid #695a57;
+      height: 100vh;
+      position: fixed;
+      left: 500px;
+      top: 0;
+      }
+    .skills-box {
+        background-color: #f0f4f8; /* soft neutral blue or adjust as needed */
+        padding: 1rem;
+        border-radius: 12px;
+        margin-top: 1rem;
+        }
+
+    @media (max-height: 700px) {
+      .sidebar img.sidebar-logo {
+        width: 80px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+        align-items: center;
+        text-align: center;
+        border-right: none;
+      }
+      .divider {
+        display: none;
+      }
+      .sidebar img.profile-pic {
+        width: 80px;
+        margin-bottom: 0;
+      }
+      .sidebar img.sidebar-logo {
+        width: 80px;
+      }
+      .sidebar h1 {
+        margin-left: 0;
+        align-self: center;
+        font-size: 1.5rem;
+      }
+      .sidebar nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        text-align: center;
+        margin-left: 0;
+      }
+      .main-content {
+        margin-left: 0;
+        padding: 1rem;
+      }
+      .main-content section p {
+        margin-left: 0;
+      }
+    }
+    #data-analytics {
+  background-color: #f8f6f3;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+}
+
+#data-analytics img {
+  display: block;
+  margin: 1.5rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+  </style>
 </head>
 <body>
-  <header class="top-nav">
-    <div class="nav-container">
-      <div class="nav-title">Hailey Reed | Portfolio</div>
-      <nav>
-        <ul>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="index.html#data-analytics">Portfolio</a></li>
-          <li><a href="resume.pdf" target="_blank">Resume</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
+  
+    <!-- Bar Menu on the TOP of the Page -->
+    <header class="top-nav">
+      <div class="nav-container">
+        <div class="nav-title">Hailey Reed</div>
+        <nav>
+          <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="#data-analytics">Portfolio</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+  <!-- Menu on the Left Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <h1>Hailey Reed | Portfolio</h1>
+      <img src="images/withborder.png" alt="Profile Picture" class="profile-pic" />
     </div>
-  </header>
+    <img src="images/sidebarlogo.png" alt="Sidebar Logo" class="sidebar-logo" />
+  </aside>
 
-  <main style="margin-top: 100px; padding: 2rem;">
-    <h1>About Me</h1>
-    <p>Hi! I'm Hailey Reed, a junior Computer Science major at the University of Connecticut with a concentration in Computational Data Analytics (AI) and a Mathematics minor. I'm passionate about data, AI, and using technology to create meaningful impact.</p>
+  <div class="divider"></div>
 
-    <p>Outside of code, I’m interested in health, fashion, and human-centered design. I love building projects that are both technically sound and aesthetically thoughtful.</p>
+<!-- Main Content -->
+<div class="main-content">
+  <section id="dog">
+    <h2>Charlie 🐾</h2>
+    <p>Meet my Golden Retriever Puppy. He makes a fantastic assistant. He is passionate about relational databses.</p>
+    <img src="images/5steps.png" alt="Data Workflow Diagram" style="max-width: 100%; border-radius: 12px;" />
+  </section>
 
-    <p>Let’s connect!</p>
-  </main>
+<section id="data-collection">
+  <h3>1. Data Collection</h3>
+  <p>Projects involving raw data acquisition through APIs, CSVs, and external sources.</p>
 
-  <footer>
-    <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed/">LinkedIn</a></p>
-  </footer>
-</body>
-</html>
+
+</section>
