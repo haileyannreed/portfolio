@@ -13,170 +13,143 @@
       background-color: #fdfdfd;
       color: #333;
       display: flex;
-      flex-direction: row;
-      .main-content h2, .main-content h3 {
-        color: #695a57;
-      }
-.top-nav {
-  width: 100%;
-  background-color: #e4e2dd;
-  padding: 1rem 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  border-bottom: 4px solid #695a57;
-  box-sizing: border-box;
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #695a57;
-}
-
-.top-nav nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-}
-
-.top-nav nav ul li a {
-  text-decoration: none;
-  color: #695a57;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.top-nav nav ul li a:hover {
-  color: #000;
-}
-  .pdf-tag {
-    background-color: #695a57;
-    color: #fff;
-    font-size: 0.65rem;
-    padding: 2px 5px;
-    border-radius: 4px;
-    margin-left: 5px;
-    vertical-align: middle;
-    }
-    body {
+      flex-direction: column;
       padding-top: 70px;
-      }
+    }
+
+    .main-content h2, .main-content h3 {
+      color: #695a57;
+    }
+
+    .top-nav {
+      width: 100%;
+      background-color: #e4e2dd;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 4px solid #695a57;
+      box-sizing: border-box;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #695a57;
+    }
+
+    .top-nav nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .top-nav nav ul li a {
+      text-decoration: none;
+      color: #695a57;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .top-nav nav ul li a:hover {
+      color: #000;
+    }
+
+    .pdf-tag {
+      background-color: #695a57;
+      color: #fff;
+      font-size: 0.65rem;
+      padding: 2px 5px;
+      border-radius: 4px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
     .contact-main {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 2rem;
-}
+      display: flex;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
 
-.contact-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3rem;
-  padding: 2rem;
-  border-radius: 20px;
-  background-color: #f8f6f3;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  max-width: 800px;
-  width: 100%;
-}
+    .contact-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+      padding: 2rem;
+      border-radius: 20px;
+      background-color: #f8f6f3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 800px;
+      width: 100%;
+    }
 
-.contact-photo img {
-  width: 250px;
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
+    .contact-photo img {
+      width: 250px;
+      border-radius: 12px; /* rectangle style */
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
 
-.contact-info {
-  font-size: 1.1rem;
-  color: #333;
-}
+    .contact-info {
+      font-size: 1.1rem;
+      color: #333;
+    }
 
-.contact-info h2 {
-  color: #695a57;
-  margin-bottom: 1rem;
-}
+    .contact-info h2 {
+      color: #695a57;
+      margin-bottom: 1rem;
+    }
 
-.contact-info a {
-  color: #4a90e2;
-  text-decoration: none;
-}
+    .contact-info a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
 
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 4rem 2rem;
-  gap: 3rem;
-}
-
-.contact-photo img {
-  width: 250px;
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info {
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.contact-info h2 {
-  color: #695a57;
-  margin-bottom: 1rem;
-}
-
-.contact-info a {
-  color: #4a90e2;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="nav-title">Hailey Reed</div>
+      <nav>
+        <ul>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="index.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="Resume.pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Bar Menu on the TOP of the Page -->
-    <header class="top-nav">
-      <div class="nav-container">
-        <div class="nav-title">Hailey Reed</div>
-        <nav>
-          <ul>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="index.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="Resume.pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+  <!-- Contact Section -->
   <main class="contact-main">
-  <div class="contact-photo">
-    <img src="images/Headshot_Jan2025.jpg" alt="Hailey Reed" />
-  </div>
-  <div class="contact-info">
-    <h2>Contact Me</h2>
-    <p><strong>Email:</strong> reedhaileyann@gmail.com</p>
-    <p><strong>Phone:</strong> (475) 224 7376</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hailey-ann-reed/" target="_blank">linkedin.com/in/hailey-ann-reed</a></p>
-  </div>
-</main>
-
+    <div class="contact-card">
+      <div class="contact-photo">
+        <img src="images/Headshot_Jan2025.jpg" alt="Hailey Reed" />
+      </div>
+      <div class="contact-info">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> reedhaileyann@gmail.com</p>
+        <p><strong>Phone:</strong> (475) 224 7376</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hailey-ann-reed/" target="_blank">linkedin.com/in/hailey-ann-reed</a></p>
+      </div>
+    </div>
+  </main>
 </body>
+</html>
