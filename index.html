@@ -9,7 +9,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
     }
     body {
       margin: 0;
@@ -107,10 +107,13 @@
       }
     }
     @media (max-width: 768px) {
+      body {
+        padding: 0 1rem;
+      }
       .home-section {
-        height: 85vh;
-        padding-top: 80px;
-        background-size: contain;
+        height: 80vh;
+        padding-top: 70px;
+        background-size: 120%;
         background-position: top center;
       }
       .top-nav nav ul {
@@ -119,6 +122,9 @@
       }
       .nav-container {
         flex-direction: column;
+      }
+      .about-plain, .contact-main {
+        padding: 0 1rem;
       }
     }
     .about-plain h1, .contact-info h2, .main-content h2, .main-content h3 {
@@ -290,3 +296,4 @@
   </footer>
 </body>
 </html>
+
