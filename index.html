@@ -6,7 +6,6 @@
   <title>Hailey Reed | Portfolio</title>
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
   <style>
-    /* Combined Styles */
     html {
       scroll-behavior: smooth;
     }
@@ -69,13 +68,13 @@
     .main-content {
       padding: 2rem;
     }
-    .about-plain, .contact-main {
+    .about-plain, .contact-main, .home-section {
       max-width: 1000px;
       margin: 6rem auto;
       padding: 0 2rem;
       text-align: center;
     }
-    .about-plain h1, .contact-info h2, .main-content h2, .main-content h3 {
+    .about-plain h1, .contact-info h2, .main-content h2, .main-content h3, .home-section h1 {
       color: #695a57;
     }
     .dog-container, .contact-card {
@@ -138,9 +137,10 @@
       <div class="nav-title">Hailey Reed</div>
       <nav>
         <ul>
-          <li><a href="#about">About Me</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About Me</a></li>
           <li><a href="Resume.pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
         </ul>
       </nav>
@@ -148,21 +148,9 @@
   </header>
 
   <main class="main-content">
-    <section id="about" class="about-plain">
-      <h1>Hello! I'm Hailey.</h1>
-      <p>I’m a junior Computer Science major at the University of Connecticut with a concentration in Computational Data Analytics and a minor in Mathematics. I aspire to work with Big Data — whether as a data analyst, data engineer, or in the field of quantitative finance.</p>
-    </section>
-
-    <section>
-      <div class="dog-container">
-        <div class="dog-text">
-          <h2>Charlie 🐾</h2>
-          <p>Meet my Golden Retriever puppy, Charlie! He makes a fantastic assistant and is passionate about relational databases.</p>
-        </div>
-        <div class="dog-image">
-          <img src="images/Charlie.png" alt="Charlie the Golden Retriever" />
-        </div>
-      </div>
+    <section id="home" class="home-section">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I’m Hailey Reed, a Computer Science student passionate about data analytics, AI, and creative problem solving.</p>
     </section>
 
     <section id="portfolio">
@@ -231,6 +219,21 @@
           <p><strong>Email:</strong> reedhaileyann@gmail.com</p>
           <p><strong>Phone:</strong> (475) 224 7376</p>
           <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hailey-ann-reed/" target="_blank">linkedin.com/in/hailey-ann-reed</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-plain">
+      <h1>About Me</h1>
+      <p>I’m a junior Computer Science major at the University of Connecticut with a concentration in Computational Data Analytics and a minor in Mathematics. I aspire to work with Big Data — whether as a data analyst, data engineer, or in the field of quantitative finance.</p>
+
+      <div class="dog-container">
+        <div class="dog-text">
+          <h2>Charlie 🐾</h2>
+          <p>Meet my Golden Retriever puppy, Charlie! He makes a fantastic assistant and is passionate about relational databases.</p>
+        </div>
+        <div class="dog-image">
+          <img src="images/Charlie.png" alt="Charlie the Golden Retriever" />
         </div>
       </div>
     </section>
