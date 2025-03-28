@@ -83,13 +83,12 @@
       background-color: #bcb5ad;
       background: url('images/home_backround.png') no-repeat center center/cover;
       width: 100%;
+      height: 100vh;
+      margin: 0;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
-      flex-direction: column;
       position: relative;
-      padding-top: 150px;
-      padding-bottom: 60px;
     }
     .scroll-down {
       position: absolute;
@@ -113,11 +112,10 @@
         padding: 0 1rem;
       }
       .home-section {
-        background-size: cover;
-        background-position: center top;
-        padding-top: 180px;
-        padding-bottom: 40px;
-        min-height: auto;
+        height: 85vh;
+        padding-top: 80px;
+        background-size: contain;
+        background-position: top center;
       }
       .top-nav nav ul {
         gap: 1rem;
@@ -187,6 +185,7 @@
     }
   </style>
 </head>
+
 
 <body>
   <header class="top-nav">
