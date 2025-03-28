@@ -96,6 +96,33 @@
         margin: 0 auto;
       }
     }
+    @media (max-width: 768px) {
+      .home-section {
+        height: 100vh;
+        max-width: 430px;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: top center;
+        padding-top: 70px;
+      }
+    }
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      font-size: 2rem;
+      color: #fff;
+      animation: bounce 2s infinite;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, -10px);
+      }
+    }
 @media (max-width: 768px) {
   .home-section {
     height: 100vh;
