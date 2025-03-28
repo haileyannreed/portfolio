@@ -4,397 +4,240 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hailey Reed | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
   <style>
+    /* Combined Styles */
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #fdfdfd;
       color: #333;
       display: flex;
-      flex-direction: row;
-      .main-content h2, .main-content h3 {
-        color: #695a57;
-      }
-.top-nav {
-  width: 100%;
-  background-color: #e4e2dd;
-  padding: 1rem 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  border-bottom: 4px solid #695a57;
-  box-sizing: border-box;
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #695a57;
-}
-
-.top-nav nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-}
-
-.top-nav nav ul li a {
-  text-decoration: none;
-  color: #695a57;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.top-nav nav ul li a:hover {
-  color: #000;
-}
-  .pdf-tag {
-    background-color: #695a57;
-    color: #fff;
-    font-size: 0.65rem;
-    padding: 2px 5px;
-    border-radius: 4px;
-    margin-left: 5px;
-    vertical-align: middle;
-    }
-
-
-    body {
-      padding-top: 70px;
-      }
-
-    .sidebar {
-      width: 500px;
-      background-color: #e4e2dd;
-      color: #000000;
-      padding: 2rem 1rem;
-      position: fixed;
-      height: 100vh;
-      display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: left;
-      border-right: 4px solid #695a57;
+      padding-top: 70px;
+    }
+    .top-nav {
+      width: 100%;
+      background-color: #e4e2dd;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      border-bottom: 4px solid #695a57;
       box-sizing: border-box;
+    }
+    .nav-container {
+      display: flex;
       justify-content: space-between;
-      }
-    .sidebar img.profile-pic {
-      width: 250px;
-      margin-top: 7rem;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-      object-fit: cover;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      }
-    .sidebar img.sidebar-logo {
-      width: 150px;
-      margin-bottom: 2rem;
-      align-self: center;
-      }
-    .sidebar h1 {
-      margin-bottom: 2rem;
-      color: #695a57;
-      margin-left: 2rem;
-      font-size: 2rem;
-      align-self: flex-start;
-      }
-    .sidebar nav ul {
-      list-style: none;
-      padding: 0;
-      margin-left: 2rem;
-      text-align: left;
-      }
-    .sidebar nav ul li {
-      margin: 1rem 0;
-      }
-    .sidebar nav ul li a {
-      color: #695a57;
-      text-decoration: none;
-      font-weight: bold;
+      align-items: center;
+    }
+    .nav-title {
       font-size: 1.2rem;
-      transition: color 0.3s ease;
-      }
-    .sidebar nav ul li a:hover {
-      color: #000;
-      }
-    .main-content {
-      margin-left: 520px;
-      padding: 2rem 3rem;
-      flex: 1;
-      }
-    .main-content h2, .main-content h3 {
+      font-weight: bold;
       color: #695a57;
-      }
-    .main-content section p {
-      margin-left: 2rem;
-      }
-    .project-card {
+    }
+    .top-nav nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+    }
+    .top-nav nav ul li a {
+      text-decoration: none;
+      color: #695a57;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    .top-nav nav ul li a:hover {
+      color: #000;
+    }
+    .pdf-tag {
+      background-color: #695a57;
+      color: #fff;
+      font-size: 0.65rem;
+      padding: 2px 5px;
+      border-radius: 4px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .main-content {
+      padding: 2rem;
+    }
+    .about-plain, .contact-main {
+      max-width: 1000px;
+      margin: 6rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .about-plain h1, .contact-info h2, .main-content h2, .main-content h3 {
+      color: #695a57;
+    }
+    .dog-container, .contact-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      background-color: #f8f6f3;
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 4rem auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-wrap: wrap;
+    }
+    .dog-text, .contact-info {
+      flex: 1;
+      min-width: 250px;
+      text-align: left;
+    }
+    .dog-text h2 {
+      color: #695a57;
+    }
+    .dog-image img, .contact-photo img {
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+    .project-card, .skills-box {
       background-color: #f0f4f8;
       padding: 1rem;
       margin: 1rem 0;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-    .project-card a {
-      display: inline-block;
-      margin-top: 0.5rem;
+    }
+    .project-card a, .contact-info a {
       color: #4a90e2;
       text-decoration: none;
       font-weight: bold;
-      }
-    .project-card a:hover {
+    }
+    .project-card a:hover, .contact-info a:hover {
       text-decoration: underline;
-      }
-    ul.skill-list {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-      }
-    ul.skill-list li {
-      display: inline-block;
-      background-color: #e1ecf4;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.95rem;
-      }
+    }
     footer {
       background-color: #e4e2dd;
       color: #000;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
-      }
+    }
     footer a {
       color: #000;
       text-decoration: underline;
-      }
-    .divider {
-      border-left: 4px solid #695a57;
-      height: 100vh;
-      position: fixed;
-      left: 500px;
-      top: 0;
-      }
-    .skills-box {
-        background-color: #f0f4f8; /* soft neutral blue or adjust as needed */
-        padding: 1rem;
-        border-radius: 12px;
-        margin-top: 1rem;
-        }
-
-    @media (max-height: 700px) {
-      .sidebar img.sidebar-logo {
-        width: 80px;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-      }
     }
-
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 1rem;
-        align-items: center;
-        text-align: center;
-        border-right: none;
-      }
-      .divider {
-        display: none;
-      }
-      .sidebar img.profile-pic {
-        width: 80px;
-        margin-bottom: 0;
-      }
-      .sidebar img.sidebar-logo {
-        width: 80px;
-      }
-      .sidebar h1 {
-        margin-left: 0;
-        align-self: center;
-        font-size: 1.5rem;
-      }
-      .sidebar nav ul {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        text-align: center;
-        margin-left: 0;
-      }
-      .main-content {
-        margin-left: 0;
-        padding: 1rem;
-      }
-      .main-content section p {
-        margin-left: 0;
-      }
-    }
-    #data-analytics {
-  background-color: #f8f6f3;
-  padding: 2rem;
-  border-radius: 16px;
-  margin-bottom: 2.5rem;
-}
-
-#data-analytics img {
-  display: block;
-  margin: 1.5rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
   </style>
 </head>
 <body>
-  
-    <!-- Bar Menu on the TOP of the Page -->
-    <header class="top-nav">
-      <div class="nav-container">
-        <div class="nav-title">Hailey Reed</div>
-        <nav>
-          <ul>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="index.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="Resume.pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-  <!-- Menu on the Left Sidebar -->
-  <aside class="sidebar">
-    <div>
-      <h1> </h1>
-      <img src="images/withborder.png" alt="Profile Picture" class="profile-pic" />
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="nav-title">Hailey Reed</div>
       <nav>
         <ul>
-          <li><a href="#data-collection">Data Collection</a></li>
-          <li><a href="#data-storage">Data Storage</a></li>
-          <li><a href="#data-cleaning">Data Cleaning</a></li>
-          <li><a href="#data-analysis">Data Analysis</a></li>
-          <li><a href="#data-visualization">Data Visualization</a></li>
-          <li><a href="#skills">Additional Skills</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Resume.pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
         </ul>
       </nav>
     </div>
-    <img src="images/sidebarlogo.png" alt="Sidebar Logo" class="sidebar-logo" />
-  </aside>
+  </header>
 
-  <div class="divider"></div>
+  <main class="main-content">
+    <section id="about" class="about-plain">
+      <h1>Hello! I'm Hailey.</h1>
+      <p>I’m a junior Computer Science major at the University of Connecticut with a concentration in Computational Data Analytics and a minor in Mathematics. I aspire to work with Big Data — whether as a data analyst, data engineer, or in the field of quantitative finance.</p>
+    </section>
 
-<!-- Main Content -->
-<div class="main-content">
-  <section id="data-analytics">
-    <h2>Data Analytics</h2>
-    <p>This visual represents the key stages of my data workflow—from collecting raw data to producing clear, insightful visualizations. Below are projects I have made to show my proficiency with the corresponding steps.</p>
+    <section>
+      <div class="dog-container">
+        <div class="dog-text">
+          <h2>Charlie 🐾</h2>
+          <p>Meet my Golden Retriever puppy, Charlie! He makes a fantastic assistant and is passionate about relational databases.</p>
+        </div>
+        <div class="dog-image">
+          <img src="images/Charlie.png" alt="Charlie the Golden Retriever" />
+        </div>
+      </div>
+    </section>
 
-    <img src="images/5steps.png" alt="Data Workflow Diagram" style="max-width: 100%; border-radius: 12px;" />
-  </section>
+    <section id="portfolio">
+      <h2>Data Analytics</h2>
+      <p>This visual represents the key stages of my data workflow—from collecting raw data to producing clear, insightful visualizations. Below are projects I have made to show my proficiency with the corresponding steps.</p>
+      <img src="images/5steps.png" alt="Data Workflow Diagram" style="max-width: 100%; border-radius: 12px;" />
 
-<section id="data-collection">
-  <h3>1. Data Collection</h3>
-  <p>Projects involving raw data acquisition through APIs, CSVs, and external sources.</p>
+      <h3>1. Data Collection</h3>
+      <div class="project-card">
+        <p>Projects involving raw data acquisition through APIs, CSVs, and external sources.</p>
+        <p><strong>Skills:</strong> APIs, CSVs, Python</p>
+      </div>
 
-  <div class="skills-box">
-    <p><strong>Skills:</strong></p>
-    <ul class="skill-list">
-      <li>APIs</li>
-      <li>CSVs</li>
-      <li>Python</li>
-    </ul>
-  </div>
-</section>
+      <h3>2. Data Storage</h3>
+      <div class="project-card">
+        <p>Projects showcasing my ability to model and implement relational databases with SQL.</p>
+        <p><strong>Skills:</strong> Relational Databases, Oracle SQL, ER/EER Diagrams, Schema Design, Normalization</p>
+      </div>
 
-<section id="data-storage">
-  <h3>2. Data Storage</h3>
-  <p>Projects showcasing my ability to model and implement relational databases with SQL.</p>
+      <h3>3. Data Cleaning</h3>
+      <div class="project-card">
+        <p>Removing duplicates, handling missing values, and formatting data using Excel or Python's <code>pandas</code> library.</p>
+        <p><strong>Skills:</strong> Pandas, Excel, Data Wrangling, Missing Value Handling, Standardization</p>
+      </div>
 
-  <div class="project-card">
-    <p><strong>Skills:</strong> Relational Databases, Oracle SQL, ER/EER Diagrams, Schema Design, Normalization</p>
-    <!-- Optional: Link to GitHub repo or project -->
-  </div>
-</section>
+      <h3>4. Data Analysis</h3>
+      <div class="project-card">
+        <p>Performing exploratory analysis, calculating KPIs, and discovering trends with SQL, Excel formulas, and visual summaries.</p>
+        <p><strong>Skills:</strong> SQL, Excel Formulas, Python Stats, KPIs, Exploratory Data Analysis</p>
+      </div>
 
-<section id="data-cleaning">
-  <h3>3. Data Cleaning</h3>
-  <p>Removing duplicates, handling missing values, and formatting data using Excel or Python's <code>pandas</code> library.</p>
+      <h3>5. Data Visualization</h3>
+      <div class="project-card">
+        <p>Creating dynamic dashboards using Power BI and generating charts with Matplotlib to support data storytelling.</p>
+        <p><strong>Skills:</strong> Power BI, Matplotlib, Data Storytelling, Dashboard Design, Visual Encoding</p>
+      </div>
 
-  <div class="project-card">
-    <p><strong>Skills:</strong> Pandas, Excel, Data Wrangling, Missing Value Handling, Standardization</p>
-  </div>
-</section>
+      <div class="project-card">
+        <h4>Honors Project – Search Algorithm Visualization</h4>
+        <p>Developed a visualization tool to compare search algorithms (BFS, DFS, A*, etc.) using Python. Demonstrated how different algorithms traverse a map and arrive at solutions using NetworkX and Matplotlib.</p>
+        <p><strong>Skills:</strong> Python, NetworkX, Matplotlib, A* Search, BFS, DFS, Algorithm Visualization</p>
+        <a href="https://github.com/haileyannreed/yourproject" target="_blank">View on GitHub</a>
+      </div>
 
-<section id="data-analysis">
-  <h3>4. Data Analysis</h3>
-  <p>Performing exploratory analysis, calculating KPIs, and discovering trends with SQL, Excel formulas, and visual summaries.</p>
+      <h2>Additional Skills</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Built and deployed this personal portfolio using HTML and CSS. Hosted on GitHub Pages with version control using Git.</p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Git</li>
+          <li>GitHub Pages</li>
+        </ul>
+        <a href="https://github.com/haileyannreed/portfolio" target="_blank">View Source Code on GitHub</a>
+      </div>
+    </section>
 
-  <div class="project-card">
-    <p><strong>Skills:</strong> SQL (JOIN, GROUP BY), Excel Formulas, Python Stats, KPIs, Exploratory Data Analysis</p>
-  </div>
-</section>
+    <section id="contact" class="contact-main">
+      <div class="contact-card">
+        <div class="contact-photo">
+          <img src="images/Headshot_Jan2025.jpg" alt="Hailey Reed" />
+        </div>
+        <div class="contact-info">
+          <h2>Contact Me</h2>
+          <p><strong>Email:</strong> reedhaileyann@gmail.com</p>
+          <p><strong>Phone:</strong> (475) 224 7376</p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hailey-ann-reed/" target="_blank">linkedin.com/in/hailey-ann-reed</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section id="data-visualization">
-  <h3>5. Data Visualization</h3>
-  <p>Creating dynamic dashboards using Power BI and generating charts with Matplotlib to support data storytelling.</p>
-
-  <div class="project-card">
-    <p><strong>Skills:</strong> Power BI, Matplotlib, Data Storytelling, Dashboard Design, Visual Encoding</p>
-  </div>
-
-  <div class="project-card">
-    <h4>Honors Project – Search Algorithm Visualization</h4>
-    <p>
-      Developed a visualization tool to compare search algorithms (BFS, DFS, A*, etc.) using Python. 
-      Demonstrated how different algorithms traverse a map and arrive at solutions using NetworkX and Matplotlib.
-    </p>
-    <p><strong>Skills:</strong> Python, NetworkX, Matplotlib, A* Search, BFS, DFS, Algorithm Visualization</p>
-    <a href="https://github.com/haileyannreed/yourproject" target="_blank">View on GitHub</a>
-  </div>
-</section>
-
-    <section id="skills">
-  <h2>Additional Skills</h2>
-<div class="project-card">
-  <h3>Portfolio Website</h3>
-  <p>
-    Built and deployed this personal portfolio using HTML and CSS. Hosted on GitHub Pages with version control using Git.
-  </p>
-  <ul class="skill-list">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>Git</li>
-    <li>GitHub Pages</li>
-  </ul>
-  <a href="https://github.com/haileyannreed/portfolio" target="_blank">View Source Code on GitHub</a>
-</div>
-</section>
-
-
-    <footer>
-      <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed/">LinkedIn</a></p>
-    </footer>
-  </div>
+  <footer>
+    <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed/">LinkedIn</a></p>
+  </footer>
 </body>
 </html>
-
-
