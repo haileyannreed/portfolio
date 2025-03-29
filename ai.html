@@ -15,9 +15,12 @@
       color: #333;
       padding-top: 70px;
     }
+
     h1, h2, h3, .nav-title {
       font-family: 'Playfair Display', serif;
     }
+
+    /* Navigation */
     .top-nav {
       width: 100%;
       background-color: #e4e2dd;
@@ -29,16 +32,19 @@
       border-bottom: 4px solid #695a57;
       box-sizing: border-box;
     }
+
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .nav-title {
       font-size: 1.2rem;
       font-weight: bold;
       color: #695a57;
     }
+
     .top-nav nav ul {
       list-style: none;
       margin: 0;
@@ -46,6 +52,7 @@
       display: flex;
       gap: 2rem;
     }
+
     .top-nav nav ul li a {
       text-decoration: none;
       color: #695a57;
@@ -53,30 +60,33 @@
       font-size: 1rem;
       transition: color 0.3s ease;
     }
+
     .top-nav nav ul li a:hover {
       color: #000;
     }
 
-    /* AI Section */
+    /* AI Header Section */
     .ai-section {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      margin: 3rem auto;
+      margin: 3rem auto 1rem;
       max-width: 900px;
       padding: 0 1rem;
       flex-wrap: wrap;
       text-align: center;
     }
+
     .ai-section img {
       width: 80px;
       height: 80px;
     }
+
     .ai-text h1 {
       color: #4a3f3f;
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
     }
 
     .ai-description {
@@ -86,41 +96,67 @@
       padding: 0 1rem;
     }
 
-    /* Project Card */
-    .projects-section {
-      padding: 2rem;
-      text-align: center;
+    /* Honors Project Layout */
+    .honors-project {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 4rem auto;
+      max-width: 1000px;
+      padding: 0 1rem;
+      flex-wrap: wrap;
     }
+
+    .project-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .project-text h2 {
+      color: #4a3f3f;
+    }
+
+    .project-text p {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 1rem 0;
+    }
+
+    .project-text a {
+      color: #695a57;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
     .project-card {
-      display: block;
-      width: 90%;
+      flex: 1;
       max-width: 400px;
-      aspect-ratio: 1 / 1;
-      background-image: url('images/Romania.png');
-      background-size: cover;
-      background-position: center;
+      position: relative;
       border-radius: 20px;
       overflow: hidden;
-      text-decoration: none;
-      margin: 2rem auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
-    .project-card:hover {
-      transform: scale(1.03);
-    }
-    .project-title {
-      background-color: rgba(0,0,0,0.6);
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-}
 
+    .project-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .project-title {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 0.5rem;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1.1rem;
+    }
   </style>
 </head>
 <body>
+
 
   <!-- Top Nav -->
   <header class="top-nav">
@@ -134,7 +170,7 @@
     </div>
   </header>
 
-  <!-- AI Section -->
+  <!-- AI Page Intro -->
   <section class="ai-section">
     <img src="images/AI.png" alt="AI Logo">
     <div class="ai-text">
@@ -147,12 +183,21 @@
     <p>My journey in Artificial Intelligence includes coursework, research, and personal projects in machine learning, computer vision, and neural networks. Below is a showcase of my Honors Project exploring search algorithms and their performance.</p>
   </div>
 
-  <!-- Project Card -->
-  <section class="projects-section">
-    <a class="project-card" href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">
-      <div class="project-title">AI Honors Project</div>
-    </a>
-  </section>
+  <!-- Honors Project -->
+  <section class="honors-project">
+  <div class="project-text">
+    <h2>AI Honors Project</h2>
+    <p>This project explores search algorithms including BFS, DFS, UCS, Greedy, and A*. I visualized their traversal paths across a map of Romania to analyze efficiency and behavior.</p>
+    <a href="https://github.com/haileyreed/honors-project" target="_blank">View on GitHub</a>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">AI Honors Project</div>
+    <img src="images/Romania.png" alt="AI Honors Project Map" />
+  </div>
+</section>
+
+
 
 </body>
 </html>
