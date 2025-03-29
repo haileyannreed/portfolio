@@ -28,6 +28,7 @@ h1, h2, h3, h4, .nav-title {
 /* TOP NAV BAR */
 .top-nav {
   width: 100%;
+  transition: top 0.3s ease;
   background-color: #e4e2dd;
   padding: 1rem 2rem;
   position: fixed;
@@ -370,7 +371,7 @@ footer a {
 /* Small Screens [phone screen] */
 @media (max-width: 440px) {
   body {
-    padding-top: 95px;
+    padding-top: 135px;
   }
   .nav-container {
     flex-direction: column;
@@ -416,6 +417,27 @@ footer a {
   </style>
 </head>
 
+
+<script>
+  let lastScrollTop = 0;
+  const nav = document.querySelector('.top-nav');
+
+  window.addEventListener('scroll', function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (window.innerWidth <= 440) { // Only on small screens
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        nav.style.top = "-100px"; // hide
+      } else {
+        // Scrolling up
+        nav.style.top = "0"; // show
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    } else {
+      nav.style.top = "0"; // always show on large screens
+    }
+  });
+</script>
 
 
 
@@ -557,4 +579,5 @@ footer a {
   </footer>
 </body>
 </html>
+
 
