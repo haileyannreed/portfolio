@@ -216,21 +216,66 @@ h1, h2, h3, h4, .nav-title {
 }
 
 /* Projects and Skills */
-.project-card, .skills-box {
+.skills-box {
   background-color: #f0f4f8;
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.project-card a {
-  color: #f8f8f3;
+.projects-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Makes it a square */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.project-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
   font-weight: bold;
 }
-.project-card a:hover {
-  text-decoration: underline;
+
+.project-text p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
 }
+
 
 /* CONTACT SECTION */
 .contact-section {
@@ -447,44 +492,56 @@ footer a {
       <p>Undergrad | Computational Data Analytics</p>
     </div>
   </section>
-  
+
+  <section class="projects-section" id="portfolio">
+  <h2>Personal Projects</h2>
+  <div class="projects-grid">
+    <a href="https://github.com/haileyannreed/sql-project" class="project-card" style="background-image: url('images/SQL.png');">
+      <div class="project-text">
+        <h3>SQL</h3>
+        <p>Relational database modeling and querying.</p>
+      </div>
+    </a>
+    <a href="https://github.com/haileyannreed/ai-project" class="project-card" style="background-image: url('images/AI.png');">
+      <div class="project-text">
+        <h3>AI</h3>
+        <p>Search algorithms and decision making.</p>
+      </div>
+    </a>
+    <a href="https://github.com/haileyannreed/ml-project" class="project-card" style="background-image: url('images/ML.png');">
+      <div class="project-text">
+        <h3>Machine Learning</h3>
+        <p>Model training and predictive analytics.</p>
+      </div>
+    </a>
+    <a href="https://github.com/haileyannreed/cv-project" class="project-card" style="background-image: url('images/CV.png');">
+      <div class="project-text">
+        <h3>Computer Vision</h3>
+        <p>Object detection and image analysis.</p>
+      </div>
+    </a>
+    <a href="https://github.com/haileyannreed/honors-project" class="project-card" style="background-image: url('images/HJS.png');">
+      <div class="project-text">
+        <h3>Honors Project</h3>
+        <p>Search algorithm visualization.</p>
+      </div>
+    </a>
+    <!-- Optional 6th card -->
+    <a href="#" class="project-card" style="background-color: #ddd;">
+      <div class="project-text">
+        <h3>Coming Soon</h3>
+        <p>More projects on the way!</p>
+      </div>
+    </a>
+  </div>
+</section>
+
 
   <!-- Main Content -->
   <main class="main-content">
     <section id="portfolio">
       <h2>Data Analytics</h2>
-      <p>This visual represents the key stages of my data workflow—from collecting raw data to producing clear, insightful visualizations. Below are projects I have made to show my proficiency with the corresponding steps.</p>
-      <img src="images/5steps.png" alt="Data Workflow Diagram" style="max-width: 100%; border-radius: 12px;" />
 
-      <h3>1. Data Collection</h3>
-      <div class="project-card">
-        <p>Projects involving raw data acquisition through APIs, CSVs, and external sources.</p>
-        <p><strong>Skills:</strong> APIs, CSVs, Python</p>
-      </div>
-
-      <h3>2. Data Storage</h3>
-      <div class="project-card">
-        <p>Projects showcasing my ability to model and implement relational databases with SQL.</p>
-        <p><strong>Skills:</strong> Relational Databases, Oracle SQL, ER/EER Diagrams, Schema Design, Normalization</p>
-      </div>
-
-      <h3>3. Data Cleaning</h3>
-      <div class="project-card">
-        <p>Removing duplicates, handling missing values, and formatting data using Excel or Python's <code>pandas</code> library.</p>
-        <p><strong>Skills:</strong> Pandas, Excel, Data Wrangling, Missing Value Handling, Standardization</p>
-      </div>
-
-      <h3>4. Data Analysis</h3>
-      <div class="project-card">
-        <p>Performing exploratory analysis, calculating KPIs, and discovering trends with SQL, Excel formulas, and visual summaries.</p>
-        <p><strong>Skills:</strong> SQL, Excel Formulas, Python Stats, KPIs, Exploratory Data Analysis</p>
-      </div>
-
-      <h3>5. Data Visualization</h3>
-      <div class="project-card">
-        <p>Creating dynamic dashboards using Power BI and generating charts with Matplotlib to support data storytelling.</p>
-        <p><strong>Skills:</strong> Power BI, Matplotlib, Data Storytelling, Dashboard Design, Visual Encoding</p>
-      </div>
 
       <div class="project-card">
         <h4>Honors Project – Search Algorithm Visualization</h4>
