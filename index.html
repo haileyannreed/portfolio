@@ -17,15 +17,15 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #fdfdfd;
   color: #333;
-  display: flex;
   flex-direction: column;
   padding-top: 70px;
 }
+
 h1, h2, h3, h4, .nav-title {
   font-family: 'Playfair Display', serif;
 }
 
-/* Navigation Bar */
+/* TOP NAV BAR */
 .top-nav {
   width: 100%;
   background-color: #e4e2dd;
@@ -74,29 +74,93 @@ h1, h2, h3, h4, .nav-title {
   vertical-align: middle;
 }
 
+
+
+
+
+
+
 /* Layout Containers */
+.home-section {
+  background: url('images/backround.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-overlay {
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home-section p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
 .main-content {
   padding: 0 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
-.about-plain, .contact-main {
+.about-me-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.about-overlay {
+  background-color: rgba(255, 255, 255, 0); /* transparent */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.headshot-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 8px solid white;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.about-me-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  color: #4a3f3f;
+  margin-bottom: 0.5rem;
+}
+
+.about-me-section p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #4a3f3f;
+}
+
+.about-plain {
   max-width: 1000px;
   margin: 6rem auto;
   padding: 0 2rem;
   text-align: center;
 }
-.home-section {
-  background-color: #bcb5ad;
-  background: url('images/home_backround.png') no-repeat center center/cover;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-}
+
 .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -123,7 +187,7 @@ h1, h2, h3, h4, .nav-title {
 }
 
 /* Feature Sections */
-.dog-container, .contact-card {
+.dog-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +200,7 @@ h1, h2, h3, h4, .nav-title {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
 }
-.dog-text, .contact-info {
+.dog-text {
   flex: 1;
   min-width: 250px;
   text-align: left;
@@ -144,7 +208,7 @@ h1, h2, h3, h4, .nav-title {
 .dog-text h2 {
   color: #695a57;
 }
-.dog-image img, .contact-photo img {
+.dog-image img {
   width: 250px;
   border-radius: 12px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
@@ -158,14 +222,78 @@ h1, h2, h3, h4, .nav-title {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.project-card a, .contact-info a {
-  color: #4a90e2;
+.project-card a {
+  color: #f8f8f3;
   text-decoration: none;
   font-weight: bold;
 }
-.project-card a:hover, .contact-info a:hover {
+.project-card a:hover {
   text-decoration: underline;
 }
+
+/* CONTACT SECTION */
+.contact-section {
+  background: url('images/backround.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.contact-overlay {
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  font-family: 'Poppins', sans-serif;
+  margin: 0.5rem 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #8c837b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #695a57;
+}
+
 
 /* Footer */
 footer {
@@ -180,28 +308,18 @@ footer a {
   text-decoration: underline;
 }
 
-/* Media Queries */
 
-/* Large Screens */
-@media (min-width: 1300px) {
-  .home-section {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+/* SCREEN SIZES */
+
+/* Large Screens [full screen computer] */
+@media (min-width: 769px) {
+
 }
 
-/* Phone & Small Screens */
-@media (max-width: 768px) {
+/* Medium Screens [split screen] */
+@media (max-width: 660px) and (min-width: 495px) {
   body {
-    padding-top: 115px;
-  }
-  .home-section {
-    height: 70vh;
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    max-width: 100%;
-    padding-top:70px;
+    padding-top: 110px;
   }
   .nav-container {
     flex-direction: column;
@@ -220,6 +338,70 @@ footer a {
     margin-bottom: 0.5rem;
   }
 }
+@media (max-width: 494px) and (min-width: 441px) {
+  body {
+    padding-top: 135px;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-nav nav ul {
+    flex-direction: row; /* stay horizontal */
+    gap: 1rem;
+    padding-left: 0;
+    margin: 0;
+  }
+  .home-section{
+    height: 60vh;
+  }
+  .headshot-img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .nav-title {
+    margin-bottom: 0.5rem;
+  }
+}
+/* Small Screens [phone screen] */
+@media (max-width: 440px) {
+  body {
+    padding-top: 95px;
+  }
+
+  .home-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 1rem 2rem;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+
+  .headshot-img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .home-overlay {
+    padding: 1rem;
+  }
+
+  .home-section h1 {
+    font-size: 2rem;
+  }
+
+  .home-section p {
+    font-size: 1rem;
+  }
+}
+
+
   </style>
 </head>
 
@@ -248,8 +430,14 @@ footer a {
 
   <!-- Home Page [NOT part of main content] because I used a background image and do not want it following the same rules -->
   <section id="home" class="home-section">
-    <div class="scroll-down">↓</div>
+    <div class="home-overlay">
+      <p>PORTFOLIO</p>
+      <img src="images/Headshot_Jan2025.jpg" alt="Hailey Reed Headshot" class="headshot-img">
+      <h1>Hailey Reed</h1>
+      <p>Undergrad | Computational Data Analytics</p>
+    </div>
   </section>
+  
 
   <!-- Main Content -->
   <main class="main-content">
@@ -334,24 +522,29 @@ footer a {
         </div>
       </div>
     </section>
-
-  <section id="contact" class="contact-main">
-      <div class="contact-card">
-        <div class="contact-photo">
-          <img src="images/Headshot_Jan2025.jpg" alt="Hailey Reed" />
-        </div>
-        <div class="contact-info">
-          <h2>Contact Me</h2>
-          <p><strong>Email:</strong> reedhaileyann@gmail.com</p>
-          <p><strong>Phone:</strong> (475) 224 7376</p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hailey-ann-reed/" target="_blank">linkedin.com/in/hailey-ann-reed</a></p>
-        </div>
-      </div>
-  </section>
   </main>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-overlay">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:reedhaileyann@gmail.com">reedhaileyann@gmail.com</a></p>
+        <p>Phone: (475) 224 7376</p>
+        <p>Or use the form:</p>
+    
+        <form class="contact-form" action="https://formspree.io/f/movenlbq" method="POST">
+          <input type="text" name="name" placeholder="Your Name *" required>
+          <input type="email" name="email" placeholder="Your Email *" required>
+          <input type="text" name="phone" placeholder="Your Phone">
+          <textarea name="message" placeholder="Your Message *" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+    
   
   <footer>
     <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed/">LinkedIn</a></p>
   </footer>
 </body>
 </html>
+
