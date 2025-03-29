@@ -116,6 +116,21 @@ h1, h2, h3, h4, .nav-title {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.main-content h2 {
+  font-size: 3rem; /* You can make this even bigger */
+  color: #4a3f3f;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-content p {
+  font-size: 1.25rem; /* You can make this even bigger */
+  color: #4a3f3f;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .about-me-section {
   height: 100vh;
   display: flex;
@@ -253,28 +268,81 @@ h1, h2, h3, h4, .nav-title {
 .project-card:hover {
   transform: scale(1.03);
 }
+.travel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
 
-.project-text {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  padding: 1rem;
+.travel-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.travel-text h2 {
+  font-family: 'Playfair Display', serif;
+  color: #695a57;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.travel-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.travel-image {
+  flex: 1;
+  min-width: 500px;
+}
+
+.travel-image img {
   width: 100%;
-  box-sizing: border-box;
-  text-align: left;
+  height: auto;
+  border-radius: 12px;
+}
+.charlie-section {
+  display: flex;
+  flex-direction: row; /* Make sure it's row, not row-reverse */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 4rem auto;
+  max-width: 1000px;
+  padding: 2rem;
+  flex-wrap: wrap;
 }
 
-.project-text h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: bold;
+.charlie-image img {
+  width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.project-text p {
-  margin: 0.25rem 0 0;
-  font-size: 0.9rem;
+.charlie-text {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
 }
+
+.charlie-text h2 {
+  font-family: 'Playfair Display', serif;
+  color: #695a57;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.charlie-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+}
+
 
 
 /* CONTACT SECTION */
@@ -493,101 +561,53 @@ footer a {
     </div>
   </section>
 
+  <main class="main-content">
+
   <section class="projects-section" id="portfolio">
-  <h2>Personal Projects</h2>
+  <h2>Skills & Projects</h2>
+  <p>Here are some of my skills linked to personal projects</p>
   <div class="projects-grid">
     <a href="https://github.com/haileyannreed/sql-project" class="project-card" style="background-image: url('images/SQL.png');">
-      <div class="project-text">
-        <h3>SQL</h3>
-        <p>Relational database modeling and querying.</p>
-      </div>
     </a>
     <a href="https://github.com/haileyannreed/ai-project" class="project-card" style="background-image: url('images/AI.png');">
-      <div class="project-text">
-        <h3>AI</h3>
-        <p>Search algorithms and decision making.</p>
-      </div>
     </a>
     <a href="https://github.com/haileyannreed/ml-project" class="project-card" style="background-image: url('images/ML.png');">
-      <div class="project-text">
-        <h3>Machine Learning</h3>
-        <p>Model training and predictive analytics.</p>
-      </div>
     </a>
     <a href="https://github.com/haileyannreed/cv-project" class="project-card" style="background-image: url('images/CV.png');">
-      <div class="project-text">
-        <h3>Computer Vision</h3>
-        <p>Object detection and image analysis.</p>
-      </div>
     </a>
-    <a href="https://github.com/haileyannreed/honors-project" class="project-card" style="background-image: url('images/HJS.png');">
-      <div class="project-text">
-        <h3>Honors Project</h3>
-        <p>Search algorithm visualization.</p>
-      </div>
+    <a href="https://github.com/haileyannreed/honors-project" class="project-card" style="background-image: url('images/RD.png');">
     </a>
     <!-- Optional 6th card -->
-    <a href="#" class="project-card" style="background-color: #ddd;">
-      <div class="project-text">
-        <h3>Coming Soon</h3>
-        <p>More projects on the way!</p>
-      </div>
+    <a href="#" class="project-card" style="background-image: url('images/HJC.png');">
     </a>
   </div>
 </section>
 
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <section id="portfolio">
-      <h2>Data Analytics</h2>
-
-
-      <div class="project-card">
-        <h4>Honors Project – Search Algorithm Visualization</h4>
-        <p>Developed a visualization tool to compare search algorithms (BFS, DFS, A*, etc.) using Python. Demonstrated how different algorithms traverse a map and arrive at solutions using NetworkX and Matplotlib.</p>
-        <p><strong>Skills:</strong> Python, NetworkX, Matplotlib, A* Search, BFS, DFS, Algorithm Visualization</p>
-        <a href="https://github.com/haileyannreed/yourproject" target="_blank">View on GitHub</a>
-      </div>
-
-      <h2>Additional Skills</h2>
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Built and deployed this personal portfolio using HTML and CSS. Hosted on GitHub Pages with version control using Git.</p>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Git</li>
-          <li>GitHub Pages</li>
-        </ul>
-        <a href="https://github.com/haileyannreed/portfolio" target="_blank">View Source Code on GitHub</a>
-      </div>
-    </section>
-
-    <section id="about" class="about-plain">
-      <h1>About Me</h1>
+  <section id="about" class="about-plain">
+      <h2>About Me</h2>
       <p>I’m a junior Computer Science major at the University of Connecticut with a concentration in Computational Data Analytics and a minor in Mathematics. I aspire to work with Big Data — whether as a data analyst, data engineer, or in the field of quantitative finance.</p>
 
-      <div class="dog-container">
-        <div class="dog-text">
+      <div class="travel-container">
+        <div class="travel-text">
           <h2>Travel ✈️</h2>
-          <p>I love to travel! From snow to sunshine, I love a good trip.</p>
+          <p>I love to explore new places—from snowy mountains to sunny beaches. Here are a few of my favorite memories.</p>
         </div>
-        <div class="dog-image">
-          <img src="images/photo_trav.png" alt="Travel Photos" />
+        <div class="travel-image">
+          <img src="images/photopage.png" alt="Travel Collage">
         </div>
       </div>
-    </section>
       
-      <div class="dog-container">
-        <div class="dog-text">
+      <div class="charlie-section">
+        <div class="charlie-image">
+          <img src="images/mypuppy.png" alt="Charlie the Golden Retriever" />
+        </div>
+        <div class="charlie-text">
           <h2>Charlie 🐾</h2>
           <p>Meet my Golden Retriever puppy, Charlie! He makes a fantastic assistant and is passionate about relational databases.</p>
         </div>
-        <div class="dog-image">
-          <img src="images/newchar.png" alt="Charlie the Golden Retriever" />
-        </div>
       </div>
+      
+      
     </section>
   </main>
 
