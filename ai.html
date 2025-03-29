@@ -143,11 +143,27 @@
       font-size: 1.1rem;
       font-family: 'Playfair Display', serif;
     }
-    .coursework-section {
+    .section-heading {
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+.section-heading h2 {
+  font-family: 'Playfair Display', serif;
+  color: #4a3f3f;
+  font-size: 2rem;
+}
+  .section-heading h3 {
+  font-family: 'Playfair Display', serif;
+  color: #4a3f3f;
+  font-size: 1.5rem;
+}
+
+.coursework-section {
   max-width: 800px;
   margin: 4rem auto;
   padding: 0 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 .coursework-section h2 {
@@ -160,13 +176,16 @@
 .coursework-section ul {
   list-style-type: disc;
   padding-left: 1.5rem;
-  font-size: 1.1rem;
-  color: #333;
+  text-align: left;
+  display: inline-block;
 }
 
 .coursework-section li {
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
 }
+
   </style>
 </head>
 
@@ -191,14 +210,21 @@
     </div>
   </section>
 
+  <!-- AI Description -->
   <div class="ai-description">
     <p>My journey in Artificial Intelligence includes coursework, research, and personal projects in machine learning, computer vision, and neural networks. Below is a showcase of my Honors Project exploring search algorithms and their performance.</p>
+    <p>[ For the sake of my portfolio, we will differentiate AI and ML where AI is strictly reasoning based and ML involves data analysis ]</p>
   </div>
 
-  <!-- Honors Project Section -->
+<!-- Related Projects Heading -->
+<section class="section-heading">
+  <h2>Related Projects</h2>
+</section>
+
+<!-- Honors Project Section -->
 <section class="honors-project">
   <div class="project-text">
-    <h2>AI Honors Project</h2>
+    <h3>AI Honors Project</h3>
     <p>This project explores search algorithms including Breadth-First Search, Depth-First Search, Uniform Cost Search, Greedy Best-First Search, and A* Search. I visualized their traversal paths across a map of Romania to analyze their efficiency and behavior.</p>
     <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">View on GitHub</a>
   </div>
