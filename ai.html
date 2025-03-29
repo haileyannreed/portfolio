@@ -85,9 +85,21 @@
       margin: 1rem auto;
       text-align: center;
       padding: 0 1rem;
+      font-size: 1.1rem;
     }
 
-    /* Honors Project Layout */
+    /* Section Heading */
+    .section-heading {
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .section-heading h2 {
+      font-family: 'Playfair Display', serif;
+      color: #4a3f3f;
+      font-size: 2rem;
+    }
+
+    /* Honors Project */
     .honors-project {
       display: flex;
       align-items: center;
@@ -102,13 +114,12 @@
       flex: 1;
       min-width: 250px;
     }
-    .project-text h2 {
+    .project-text h3 {
       color: #4a3f3f;
+      margin-bottom: 1rem;
     }
     .project-text p {
       font-size: 1.1rem;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
       margin: 1rem 0;
     }
     .project-text a {
@@ -116,7 +127,6 @@
       font-weight: bold;
       text-decoration: underline;
     }
-
     .project-card {
       flex: 1;
       max-width: 400px;
@@ -144,55 +154,31 @@
       font-size: 1.1rem;
       font-family: 'Playfair Display', serif;
     }
-    .section-heading {
+
+    /* Coursework Section */
+    .coursework-section {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 1rem;
       text-align: center;
-      margin-top: 4rem;
     }
-
-.section-heading h2 {
-  font-family: 'Playfair Display', serif;
-  color: #4a3f3f;
-  font-size: 2rem;
-}
-  .section-heading h3 {
-  font-family: 'Playfair Display', serif;
-  color: #4a3f3f;
-  font-size: 1.5rem;
-}
-
-.coursework-section {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.coursework-section h2 {
-  font-family: 'Playfair Display', serif;
-  color: #4a3f3f;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.coursework-section p {
-  font-family: 'Poppins', sans-serif;
-  color: #4a3f3f;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.coursework-section ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  text-align: left;
-  display: inline-block;
-}
-
-.coursework-section li {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  color: #333;
-}
-
+    .coursework-section h2 {
+      font-family: 'Playfair Display', serif;
+      color: #4a3f3f;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .coursework-section ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      text-align: left;
+      display: inline-block;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    .coursework-section li {
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 
@@ -223,35 +209,35 @@
     <p>[ For the sake of my portfolio, we will differentiate AI and ML where AI is strictly reasoning based and ML involves data analysis ]</p>
   </div>
 
-<!-- Related Projects Heading -->
-<section class="section-heading">
-  <h2>Related Projects</h2>
-</section>
+  <!-- Related Projects Heading -->
+  <section class="section-heading">
+    <h2>Related Projects</h2>
+  </section>
 
-<!-- Honors Project Section -->
-<section class="honors-project">
-  <div class="project-text">
-    <h3>AI Honors Project</h3>
-    <p>This project explores search algorithms including Breadth-First Search, Depth-First Search, Uniform Cost Search, Greedy Best-First Search, and A* Search. I visualized their traversal paths across a map of Romania to analyze their efficiency and behavior.</p>
-    <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">View on GitHub</a>
-  </div>
+  <!-- Honors Project Section -->
+  <section class="honors-project">
+    <div class="project-text">
+      <h3>AI Honors Project</h3>
+      <p>This project explores search algorithms including Breadth-First Search, Depth-First Search, Uniform Cost Search, Greedy Best-First Search, and A* Search. I visualized their traversal paths across a map of Romania to analyze their efficiency and behavior.</p>
+      <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">View on GitHub</a>
+    </div>
 
-  <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank" class="project-card">
-    <div class="project-title">AI Honors Project</div>
-    <img src="images/Romania.png" alt="AI Honors Project Map" />
-  </a>
-</section>
+    <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank" class="project-card">
+      <div class="project-title">AI Honors Project</div>
+      <img src="images/Romania.png" alt="AI Honors Project Map" />
+    </a>
+  </section>
 
-<!-- Related Coursework Section -->
-<section class="coursework-section">
-  <h2>Related Coursework</h2>
-  <ul>
-    <li>UConn CSE 4502 [Honors]: Artificial Intelligence</li>
-    <li>UConn CSE 3500 [Honors]: Algorithms and Complexity</li>
-    <li>UConn CSE 5819 [Graduate Level]: Machine Learning</li>
-    <li>UConn CSE 5717 [Graduate Level]: Big Data</li>
-  </ul>
-</section>
-
+  <!-- Related Coursework Section -->
+  <section class="coursework-section">
+    <h2>Related Coursework</h2>
+    <ul>
+      <li>UConn CSE 4502 [Honors]: Artificial Intelligence</li>
+      <li>UConn CSE 3500 [Honors]: Algorithms and Complexity</li>
+      <li>UConn CSE 5819 [Graduate Level]: Machine Learning</li>
+      <li>UConn CSE 5717 [Graduate Level]: Big Data</li>
+    </ul>
+  </section>
 </body>
 </html>
+
