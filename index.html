@@ -372,14 +372,25 @@ footer a {
   body {
     padding-top: 95px;
   }
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-  .home-section {
-    height: auto;
-    min-height: 100vh;
-    padding: 4rem 1rem 2rem;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
+  .top-nav nav ul {
+    flex-direction: row; /* stay horizontal */
+    gap: 1rem;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .nav-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .home-section{
+    height: 60vh;
   }
 
   .headshot-img {
@@ -404,7 +415,6 @@ footer a {
 
   </style>
 </head>
-
 
 
 
