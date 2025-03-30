@@ -499,12 +499,11 @@ footer a {
     margin: 0 auto;
   }
 }
-
 /* Extra Large Screens (ultra-wide monitors) */
 @media (min-width: 3000px) {
   .headshot-img {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
   }
 
   .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
