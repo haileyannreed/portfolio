@@ -424,6 +424,9 @@ footer a {
 
 /* Large Screens [full screen computer] */
 @media (min-width: 1440px) {
+  .home-section {
+    min-height: 100vh;
+  }
   .about-me-section {
     min-height: 100vh;
   }
