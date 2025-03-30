@@ -360,12 +360,24 @@ footer a {
     padding: 1rem;
   }
 
-  .home-section h1 {
+  .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
     font-size: 2rem;
   }
 
-  .home-section p {
+  .main-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
     font-size: 1rem;
+  }
+
+  .nav-title {
+    font-size: 1rem;
+  }
+
+  .top-nav nav ul li a {
+    font-size: 0.85rem;
   }
 
     /* Projects Section --> Shrink & Fit Project Cards */
@@ -401,6 +413,7 @@ footer a {
   body {
     padding-top: 110px;
   }
+
   .nav-container {
     flex-direction: column;
     align-items: center;
@@ -417,12 +430,38 @@ footer a {
   .nav-title {
     margin-bottom: 0.5rem;
   }
+  .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
+    font-size: 3rem;
+  }
+
+  .main-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
+    font-size: 1.5rem;
+  }
+
+  .nav-title {
+    font-size: 1.2rem;
+  }
+
+  .top-nav nav ul li a {
+    font-size: 1rem;
+  }
 }
 
 
 /* Large Screens (desktops) */
 
 @media (min-width: 960px) {
+  .home-section {
+    min-height: 75vh;
+  }
+  .headshot-img {
+    width: 400px;
+    height: 400px;
+  }
   .about-item {
     flex-direction: row;
     justify-content: center;
@@ -441,9 +480,6 @@ footer a {
 }
 
 @media (min-width: 1440px) {
-  .home-section {
-    min-height: 95vh;
-  }
   .headshot-img {
     width: 500px;
     height: 500px;
@@ -470,9 +506,6 @@ footer a {
   }
 }
 @media (min-width: 1920px) {
-  .home-section {
-    min-height: 95vh;
-  }
   .headshot-img {
     width: 600px;
     height: 600px;
