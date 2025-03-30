@@ -436,6 +436,34 @@ footer a {
 
 @media (min-width: 1440px) {
   .home-section {
-    min-height: 100vh;
+    min-height: 95vh;
+  }
+  .headshot-img {
+    width: 500px;
+    height: 500px;
+  }
+
+  .home-section h1 {
+    font-size: 4rem;
+  }
+
+  .home-section p {
+    font-size: 2rem;
+  }
+
+  .main-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .main-content p {
+    font-size: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
   }
 }
