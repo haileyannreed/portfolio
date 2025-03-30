@@ -81,10 +81,10 @@ h1, h2, h3, h4, .nav-title {
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .home-overlay {
@@ -276,6 +276,18 @@ h1, h2, h3, h4, .nav-title {
   flex-wrap: wrap;
 }
 
+.travel-image {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 auto;
+}
+
+.travel-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
 .travel-text {
   flex: 1;
   min-width: 250px;
@@ -294,19 +306,9 @@ h1, h2, h3, h4, .nav-title {
   color: #333;
 }
 
-.travel-image {
-  flex: 1;
-  min-width: 500px;
-}
-
-.travel-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
 .charlie-section {
   display: flex;
-  flex-direction: row; /* Make sure it's row, not row-reverse */
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -422,92 +424,32 @@ footer a {
 
 /* SCREEN SIZES */
 
-/* Large Screens [full screen computer] */
-@media (min-width: 1440px) {
+/* Small Screens (phones) */
+@media (max-width: 600px) {
+  body {
+    padding-top: 135px;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-nav nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .nav-title {
+    margin-bottom: 0.5rem;
+  }
+
+    /* Home Section --> Does not need to be 100vh on a phone. adjust text.*/
   .home-section {
-    min-height: 100vh;
-  }
-  .about-me-section {
-    min-height: 100vh;
-  }
-}
-
-
-/* Medium Screens [split screen] */
-@media (max-width: 660px) and (min-width: 495px) {
-  body {
-    padding-top: 110px;
-  }
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .top-nav nav ul {
-    flex-direction: row; /* stay horizontal */
-    gap: 1rem;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .nav-title {
-    margin-bottom: 0.5rem;
-  }
-}
-@media (max-width: 494px) and (min-width: 441px) {
-  body {
-    padding-top: 135px;
-  }
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .top-nav nav ul {
-    flex-direction: row; /* stay horizontal */
-    gap: 1rem;
-    padding-left: 0;
-    margin: 0;
-  }
-  .home-section{
-    height: 60vh;
-  }
-  .headshot-img {
-    width: 250px;
-    height: 250px;
-    margin-bottom: 1rem;
-  }
-
-  .nav-title {
-    margin-bottom: 0.5rem;
-  }
-}
-/* Small Screens [phone screen] */
-@media (max-width: 440px) {
-  body {
-    padding-top: 135px;
-  }
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .top-nav nav ul {
-    flex-direction: row; /* stay horizontal */
-    gap: 1rem;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .nav-title {
-    margin-bottom: 0.5rem;
-  }
-
-  .home-section{
-    height: 60vh;
+    min-height: 60vh;
+    padding: 2rem 1rem;
   }
 
   .headshot-img {
@@ -527,16 +469,61 @@ footer a {
   .home-section p {
     font-size: 1rem;
   }
-  .travel-container {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+    /* Projects Section --> Shrink & Fit Project Cards */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .project-card {
+    aspect-ratio: 1 / 1;
+  }
+    /* About Me */
+  .about-me-section h1 {
+    font-size: 2rem;
+  }
+
+  .about-me-section p {
+    font-size: 1rem;
+  }
+
+  /* Projects Section */
+  .main-content h2 {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
 }
 
-.travel-image {
-  min-width: 300px;
-  max-width: 90%;
-  margin: 0 auto;
-}
+/* Medium Screens (small laptops, tablets) */
+@media (max-width: 1024px) and (min-width: 601px) {
+  body {
+    padding-top: 110px;
+  }
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .top-nav nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .nav-title {
+    margin-bottom: 0.5rem;
+  }
 }
 
+/* Large Screens (desktops) */
+@media (min-width: 1440px) {
+  .home-section {
+    min-height: 100vh;
+  }
+}
