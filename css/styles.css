@@ -442,14 +442,14 @@ footer a {
 }
 
 /* Large Screens (desktops) */
-@media (min-width: 1281px) and (max-width: 1700px) {
+@media (min-width: 1281px) and (max-width: 2100px) {
   .home-section {
-    min-height: 75vh;
+    min-height: 90vh;
   }
 
   .headshot-img {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
   }
 
   .about-item {
@@ -498,7 +498,7 @@ footer a {
 }
 
 /* Extra Large Screens (ultra-wide monitors) */
-@media (min-width: 1701px) {
+@media (min-width: 2100px) {
   .headshot-img {
     width: 600px;
     height: 600px;
