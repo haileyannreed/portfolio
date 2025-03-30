@@ -442,7 +442,7 @@ footer a {
 }
 
 /* Large Screens (desktops) */
-@media (min-width: 1281px) and (max-width: 2100px) {
+@media (min-width: 1281px) and (max-width: 3000px) {
   .home-section {
     min-height: 90vh;
   }
@@ -498,7 +498,7 @@ footer a {
 }
 
 /* Extra Large Screens (ultra-wide monitors) */
-@media (min-width: 2100px) {
+@media (min-width: 3000px) {
   .headshot-img {
     width: 600px;
     height: 600px;
