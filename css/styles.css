@@ -321,12 +321,12 @@ footer a {
 
 
 /* SCREEN SIZES */
-
 /* Small Screens (phones) */
 @media (max-width: 600px) {
   body {
     padding-top: 135px;
   }
+
   .nav-container {
     flex-direction: column;
     align-items: center;
@@ -342,9 +342,13 @@ footer a {
 
   .nav-title {
     margin-bottom: 0.5rem;
+    font-size: 1rem;
   }
 
-    /* Home Section --> Does not need to be 100vh on a phone. adjust text.*/
+  .top-nav nav ul li a {
+    font-size: 0.85rem;
+  }
+
   .home-section {
     min-height: 60vh;
     padding: 2rem 1rem;
@@ -372,15 +376,6 @@ footer a {
     font-size: 1rem;
   }
 
-  .nav-title {
-    font-size: 1rem;
-  }
-
-  .top-nav nav ul li a {
-    font-size: 0.85rem;
-  }
-
-    /* Projects Section --> Shrink & Fit Project Cards */
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -390,14 +385,6 @@ footer a {
     aspect-ratio: 1 / 1;
   }
 
-  /* Projects Section */
-  .main-content h2 {
-    font-size: 2rem;
-  }
-
-  .main-content p {
-    font-size: 1rem;
-  }
   .about-elements {
     flex-direction: column;
     align-items: center;
@@ -409,9 +396,14 @@ footer a {
 }
 
 /* Medium Screens (small laptops, tablets) */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1280px) and (min-width: 601px) {
   body {
     padding-top: 110px;
+  }
+
+  .headshot-img {
+    width: 300px;
+    height: 300px;
   }
 
   .nav-container {
@@ -429,9 +421,15 @@ footer a {
 
   .nav-title {
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
   }
+
+  .top-nav nav ul li a {
+    font-size: 1rem;
+  }
+
   .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 
   .main-content h3 {
@@ -439,29 +437,21 @@ footer a {
   }
 
   .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 1.5rem;
-  }
-
-  .nav-title {
-    font-size: 1.2rem;
-  }
-
-  .top-nav nav ul li a {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
-
 /* Large Screens (desktops) */
-
-@media (min-width: 960px) {
+@media (min-width: 1281px) and (max-width: 1700px) {
   .home-section {
     min-height: 75vh;
   }
+
   .headshot-img {
     width: 400px;
     height: 400px;
   }
+
   .about-item {
     flex-direction: row;
     justify-content: center;
@@ -469,7 +459,6 @@ footer a {
     gap: 2rem;
   }
 
-  /* Reverse Charlie's row */
   .about-item:nth-child(2) {
     flex-direction: row-reverse;
   }
@@ -477,15 +466,9 @@ footer a {
   .about-text {
     text-align: left;
   }
-}
 
-@media (min-width: 1440px) {
-  .headshot-img {
-    width: 500px;
-    height: 500px;
-  }
   .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .main-content h3 {
@@ -493,19 +476,29 @@ footer a {
   }
 
   .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .nav-title {
+    font-size: 1.5rem;
+  }
+
+  .top-nav nav ul li a {
+    font-size: 1.25rem;
   }
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
-    grid-template-rows: repeat(2, auto);   /* exactly 2 rows */
-    gap: 4rem; /* or whatever you like */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 3rem;
     width: 70%;
     margin: 0 auto;
   }
 }
-@media (min-width: 1920px) {
+
+/* Extra Large Screens (ultra-wide monitors) */
+@media (min-width: 1701px) {
   .headshot-img {
     width: 600px;
     height: 600px;
@@ -522,8 +515,36 @@ footer a {
   .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
     font-size: 2.5rem;
   }
+
   .projects-grid {
-    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 5rem;
-  } 
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .nav-title {
+    font-size: 2rem;
+  }
+
+  .top-nav nav ul li a {
+    font-size: 1.5rem;
+  }
+  
+  .about-item {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about-item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .about-text {
+    text-align: left;
+  }
 }
