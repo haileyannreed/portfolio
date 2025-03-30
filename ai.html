@@ -130,6 +130,7 @@
     .project-card {
       flex: 1;
       max-width: 400px;
+      height: 400px; /* Same height for all cards */
       position: relative;
       border-radius: 20px;
       overflow: hidden;
@@ -141,6 +142,8 @@
     }
     .project-card img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
     .project-title {
