@@ -444,7 +444,7 @@ footer a {
 /* Large Screens (desktops) */
 @media (min-width: 1281px) and (max-width: 3000px) {
   .home-section {
-    min-height: 90vh;
+    min-height: 85vh;
   }
 
   .headshot-img {
@@ -468,23 +468,23 @@ footer a {
   }
 
   .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 2.75rem;
-  }
-
-  .main-content h3 {
     font-size: 2rem;
   }
 
-  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 1.25rem;
-  }
-
-  .nav-title {
+  .main-content h3 {
     font-size: 1.5rem;
   }
 
-  .top-nav nav ul li a {
+  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
+    font-size: 1rem;
+  }
+
+  .nav-title {
     font-size: 1.25rem;
+  }
+
+  .top-nav nav ul li a {
+    font-size: 1rem;
   }
 
   .projects-grid {
@@ -492,7 +492,7 @@ footer a {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 3rem;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
   }
 }
