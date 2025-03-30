@@ -448,8 +448,8 @@ footer a {
   }
 
   .headshot-img {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
   }
 
   .about-item {
@@ -467,15 +467,18 @@ footer a {
     text-align: left;
   }
 
-  .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
+  .home-section h1 {
+    font-size: 3rem;
+  }
+  .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
     font-size: 2rem;
   }
 
-  .main-content h3 {
+  .home-section p, .main-content h3 {
     font-size: 1.5rem;
   }
 
-  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
+  .projects-section p, .main-content p, .about-section p, .contact-section p {
     font-size: 1rem;
   }
 
