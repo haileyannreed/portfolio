@@ -448,8 +448,8 @@ footer a {
   }
 
   .headshot-img {
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
   }
 
   .about-item {
@@ -468,7 +468,7 @@ footer a {
   }
 
   .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
   }
 
   .main-content h3 {
@@ -476,7 +476,7 @@ footer a {
   }
 
   .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 
   .nav-title {
@@ -521,7 +521,7 @@ footer a {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 5rem;
-    max-width: 70%;
+    max-width: 60%;
     margin: 0 auto;
   }
 
