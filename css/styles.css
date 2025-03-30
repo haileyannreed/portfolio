@@ -14,7 +14,11 @@ h1, h2, h3, h4, .nav-title {
   font-family: 'Playfair Display', serif;
 }
 
-/* TOP NAV BAR */
+
+
+
+
+/* INDEX.HTML -->TOP NAV BAR */
 .top-nav {
   width: 100%;
   transition: top 0.3s ease;
@@ -70,9 +74,9 @@ h1, h2, h3, h4, .nav-title {
 
 
 
-/* Layout Containers */
+/* INTEX.HTML --> HOME SECTION */
 .home-section {
-  background: url('images/backround.png') no-repeat center center/cover;
+  background: url('../images/backround.png') no-repeat center center/cover;
   color: #fff;
   padding: 4rem 2rem;
   text-align: center;
@@ -100,6 +104,8 @@ h1, h2, h3, h4, .nav-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
+/* INTEX.HTML --> MAIN CONTENT --> Projects & About Me Sections */
 .main-content {
   padding: 0 2rem;
   max-width: 1000px;
@@ -107,14 +113,14 @@ h1, h2, h3, h4, .nav-title {
 }
 
 .main-content h2 {
-  font-size: 3rem; /* You can make this even bigger */
+  font-size: 3rem;
   color: #4a3f3f;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .main-content p {
-  font-size: 1.25rem; /* You can make this even bigger */
+  font-size: 1.25rem;
   color: #4a3f3f;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
@@ -130,7 +136,7 @@ h1, h2, h3, h4, .nav-title {
 }
 
 .about-overlay {
-  background-color: rgba(255, 255, 255, 0); /* transparent */
+  background-color: rgba(255, 255, 255, 0);
   padding: 2rem;
   border-radius: 12px;
   max-width: 800px;
@@ -336,9 +342,9 @@ h1, h2, h3, h4, .nav-title {
 
 
 
-/* CONTACT SECTION */
+/* INDEX.HTML --> CONTACT */
 .contact-section {
-  background: url('images/backround.png') no-repeat center center/cover;
+  background: url('../images/backround.png') no-repeat center center/cover;
   color: #fff;
   padding: 4rem 2rem;
   text-align: center;
@@ -417,9 +423,12 @@ footer a {
 /* SCREEN SIZES */
 
 /* Large Screens [full screen computer] */
-@media (min-width: 769px) {
-
+@media (min-width: 1440px) {
+  .about-me-section {
+    min-height: 100vh;
+  }
 }
+
 
 /* Medium Screens [split screen] */
 @media (max-width: 660px) and (min-width: 495px) {
