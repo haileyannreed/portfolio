@@ -7,196 +7,9 @@
   <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      padding-top: 70px;
-    }
-    h1, h2, h3, .nav-title {
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* Navigation */
-    .top-nav {
-      width: 100%;
-      background-color: #e4e2dd;
-      padding: 1rem 2rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      border-bottom: 4px solid #695a57;
-      box-sizing: border-box;
-    }
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #695a57;
-    }
-    .top-nav nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 2rem;
-    }
-    .top-nav nav ul li a {
-      text-decoration: none;
-      color: #695a57;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-    .top-nav nav ul li a:hover {
-      color: #000;
-    }
-
-    /* ML Header Section */
-    .ai-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin: 3rem auto 1rem;
-      max-width: 900px;
-      padding: 0 1rem;
-      flex-wrap: wrap;
-      text-align: center;
-    }
-    .ai-section img {
-      width: 80px;
-      height: 80px;
-    }
-    .ai-text h1 {
-      color: #4a3f3f;
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    .ai-description {
-      max-width: 800px;
-      margin: 1rem auto;
-      text-align: center;
-      padding: 0 1rem;
-      font-size: 1.1rem;
-    }
-
-    /* Section Heading */
-    .section-heading {
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .section-heading h2 {
-      font-family: 'Playfair Display', serif;
-      color: #4a3f3f;
-      font-size: 2rem;
-    }
-
-    /* Honors Project */
-    .honors-project {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin: 4rem auto;
-      max-width: 1000px;
-      padding: 0 1rem;
-      flex-wrap: wrap;
-    }
-    .project-text {
-      flex: 1;
-      min-width: 250px;
-    }
-    .project-text h3 {
-      color: #4a3f3f;
-      margin-bottom: 1rem;
-    }
-    .project-text p {
-      font-size: 1.1rem;
-      margin: 1rem 0;
-    }
-    .project-text a {
-      color: #695a57;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    .project-card {
-      flex: 1;
-      max-width: 400px;
-      height: 400px; /* Same height for all cards */
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease;
-    }
-    .project-card:hover {
-      transform: scale(1.03);
-    }
-    .project-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .project-title {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 0.5rem;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 1.1rem;
-      font-family: 'Playfair Display', serif;
-    }
-
-    /* Coursework Section */
-    .coursework-section {
-      max-width: 800px;
-      margin: 4rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-    .coursework-section h2 {
-      font-family: 'Playfair Display', serif;
-      color: #4a3f3f;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .coursework-section ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      text-align: left;
-      display: inline-block;
-      font-size: 1.1rem;
-      color: #333;
-    }
-    .coursework-section li {
-      margin-bottom: 0.5rem;
-    }
- 
-    /* Footer */
-    footer {
-      background-color: #e4e2dd;
-      color: #000;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    footer a {
-      color: #000;
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 
 <body>
   <!-- Top Nav -->
@@ -212,25 +25,25 @@
   </header>
 
   <!-- CV Header -->
-  <section class="ai-section">
+  <section class="subpage-section">
     <img src="images/RD.png" alt="Relational Databases Section Logo">
-    <div class="ai-text">
+    <div class="subpage-text">
       <h1>Relational Databases</h1>
     </div>
   </section>
 
   <!-- CV Description -->
-  <div class="ai-description">
+  <div class="subpage-description">
     <p>Coming soon...</p>
   </div>
 
   <!-- Related Projects Heading -->
-  <section class="section-heading">
+  <section class="coursework-section">
     <h2>Related Projects</h2>
   </section>
   
   <!-- Research Section -->
-  <section class="honors-project">
+  <section class="subpage-project">
     <div class="project-text">
       <h3>Constructing Mock Company Database</h3>
       <p>Coming Soon...</p>
