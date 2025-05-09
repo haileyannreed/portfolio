@@ -16,8 +16,7 @@ Built using **HTML** and **CSS**, and hosted via **GitHub Pages**.
 
 ## 🚀 Live Site
 
-Check out my portfolio here:  
-[https://haileyannreed.github.io/portfoli/](https://haileyannreed.github.io/portfoli/)
+Check out my portfolio here:  https://haileyannreed.github.io/portfolio/
 
 ---
 
