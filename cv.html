@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,3 +71,111 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hailey Reed | Computer Vision</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="nav-title">Hailey Reed</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Back to Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CV Header -->
+  <section class="subpage-section">
+    <img src="images/CV.png" alt="CV Section Logo">
+    <div class="subpage-text">
+      <h1>Computer Vision</h1>
+    </div>
+  </section>
+
+  <!-- CV Description -->
+  <div class="subpage-description">
+    <p></p>
+  </div>
+
+<!-- Generative AI Heading -->
+<section class="coursework-section">
+  <h2>Generative AI</h2>
+
+  <!-- Project 1: Stable Diffusion -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>Stable Diffusion (CLIP + U-Net)</h4>
+      <p>This project utilizes <strong>Stable Diffusion</strong>, a pipeline of pretrained modules that work together to generate images by reversing the diffusion process. It breaks down the text-to-image generation workflow into three core stages:</p>
+      <ul>
+          <li><strong>Text Embedding</strong> – The input prompt is tokenized and transformed into embeddings using Google’s <em>CLIP</em> model.</li>
+          <li><strong>Denoising with U-Net</strong> – A <em>diffuser</em> model (U-Net) takes the CLIP embeddings and an initial latent of pure noise, and iteratively denoises it using the text guidance.</li>
+          <li><strong>Image Reconstruction</strong> – The final denoised latent is passed through a <em>VAE decoder</em> to generate the full-resolution image.</li>
+      </ul>
+      <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank" class="project-card">
+      <div class="project-title">Stable Diffusion</div>
+      <img src="images/stable_diff.png" alt="Stable Diffusion" />
+      </a>
+    </div>
+  </section>
+</section>
+
+
+<!-- Change Detection Heading -->
+<section class="coursework-section">
+  <h2>Change Detection</h2>
+
+  <!-- Project 1: Change Detection -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>Improving Image Segmentation using Few-Shot Learning</h4>
+      <p>This project explores how few-shot learning can improve image segmentation and change detection in material science. Using the WHU dataset, I followed a complete ML pipeline: </p>
+      <ul>
+        <li><strong>Preprocessing:</strong>Aligned and prepared SAR-RGB image pairs for training.</li>
+        <li><strong>Model Training (Warm Start):</strong>Trained both U-Net and Semi-Siamese architectures using PyTorch to identify change regions across time.</li>
+        <li><strong>Evaluation:</strong>Benchmarked model performance against state-of-the-art baselines to analyze improvements in segmentation quality.</li>
+      </ul>
+      <p>This work contributes to advancing computer vision techniques for limited-data environments.</p>
+      <a href="https://github.com/haileyannreed/Change-Detection-using-Semi-Siamese-Network" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <a href="https://github.com/haileyannreed/Change-Detection-using-Semi-Siamese-Network" target="_blank" class="project-card">
+      <div class="project-title">Change Detection</div>
+      <img src="images/sat.png" alt="Change Detection" />
+      </a>
+    </div>
+  </section>
+</section>
+
+
+  <!-- Related Coursework Section -->
+  <section class="coursework-section">
+    <h2>Related Coursework</h2>
+    <ul>
+      <li>MIT 6.S191: Introduction to Deep Learning</li>
+      <li>UConn CSE 5819 [Graduate Level]: Machine Learning</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed/">LinkedIn</a></p>
+  </footer>
+
+</body>
+</html>
+>>>>>>> 378210c (Adjusted Projects)
