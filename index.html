@@ -43,24 +43,103 @@
 
 
   <section class="projects-section" id="portfolio">
-  <h2>Skills & Projects</h2>
-  <p>Here are some of my skills linked to personal projects</p>
+  <h2>Research Projects</h2>
+  <p>Below are projects that I worked on as an Undergraduate Research Assistant</p>
   <div class="projects-grid">
-    <a href="ai.html" class="project-card" style="background-image: url('images/AI.png');">
-    </a>
-    <a href="ml.html" class="project-card" style="background-image: url('images/ML.png');">
+    <a href="quant.html" class="project-card" style="background-image: url('images/quant.png');">
     </a>
     <a href="cv.html" class="project-card" style="background-image: url('images/CV.png');">
     </a>
-    <a href="rel.html" class="project-card" style="background-image: url('images/RD.png');">
-    </a>
-    <a href="str.html" class="project-card" style="background-image: url('images/SQL.png');">
-    </a>
-    <a href="hjc.html" class="project-card" style="background-image: url('images/HJC.png');">
-    </a>
   </div>
-</section>
+  </section>
 
+  <section class="projects-section" id="portfolio">
+  <h2>Applied AI/ML Projects</h2>
+
+  <!-- Generative AI Heading -->
+  <section class="coursework-section">
+    <h2>Decision Trees</h2>
+  </section>
+
+  <!-- Credit Card Fraud Detection -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>Credit Card Fraud Detection</h4>
+      <p>This project implements the Balanced Random Forest (BRF) algorithm to detect fraudulent transactions in the highly imbalanced Credit Card Fraud Detection dataset. By applying balanced bootstrapping and unpruned decision trees, the model improves sensitivity to minority class instances (fraud) while maintaining strong overall performance. The approach closely follows the methodology from the paper "Using Random Forest to Learn Imbalanced Data" by Chen, Liaw, and Breiman (2004), and includes evaluation with metrics like F1-score, G-Mean, and Weighted Accuracy.
+      </p>
+      <a href="https://github.com/haileyannreed/Credit-Card-Fraud-Detection" target="_blank">View on GitHub</a>
+    </div>
+
+    <a href="https://github.com/haileyannreed/Credit-Card-Fraud-Detection" target="_blank" class="project-card">
+      <div class="project-title">Credit Card Fraud Detection</div>
+      <img src="images/fraud.png" alt="Credit Card Fraud Detection" />
+    </a>
+  </section>
+
+  <!-- Generative AI Heading -->
+  <section class="coursework-section">
+    <h2>Generative AI</h2>
+  </section>
+
+    <!-- Project 1: Stable Diffusion -->
+    <section class="subpage-project">
+      <div class="project-text">
+        <h4>Stable Diffusion (CLIP + U-Net)</h4>
+        <p>This project utilizes <strong>Stable Diffusion</strong>, a pipeline of pretrained modules that work together to generate images by reversing the diffusion process. It breaks down the text-to-image generation workflow into three core stages:</p>
+        <ul>
+            <li><strong>Text Embedding</strong> – The input prompt is tokenized and transformed into embeddings using Google’s <em>CLIP</em> model.</li>
+            <li><strong>Denoising with U-Net</strong> – A <em>diffuser</em> model (U-Net) takes the CLIP embeddings and an initial latent of pure noise, and iteratively denoises it using the text guidance.</li>
+            <li><strong>Image Reconstruction</strong> – The final denoised latent is passed through a <em>VAE decoder</em> to generate the full-resolution image.</li>
+        </ul>
+        <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank" class="project-card">
+        <div class="project-title">Stable Diffusion</div>
+        <img src="images/stable_diff.png" alt="Stable Diffusion" />
+        </a>
+      </div>
+    </section>
+
+  <!-- Generative AI Heading -->
+  <section class="coursework-section">
+    <h2>Pathfinding Algorithms</h2>
+  </section>
+
+  <!-- AI Project Section -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>AI Honors Project</h4>
+      <p>This project explores search algorithms including Breadth-First Search, Depth-First Search, Uniform Cost Search, Greedy Best-First Search, and A* Search. I visualized their traversal paths across a map of Romania to analyze their efficiency and behavior.</p>
+      <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">View on GitHub</a>
+    </div>
+
+    <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank" class="project-card">
+      <div class="project-title">AI Honors Project</div>
+      <img src="images/Rom.png" alt="AI Honors Project Map" />
+    </a>
+  </section>
+
+  <!-- Generative AI Heading -->
+  <section class="coursework-section">
+    <h2>Web Tools/Front End</h2>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>This Portfolio!!</h4>
+      <p>This portfolio was built using HTML, JavaScript, and CSS, with additional visuals designed in Canva. I created this site to showcase my projects and skills in a more interactive and accessible way than a traditional resume or GitHub page.</p>
+      <a href="https://github.com/haileyannreed/portfolio" target="_blank">View on GitHub</a>
+    </div>
+
+    <a href="https://github.com/haileyannreed/portfolio" target="_blank" class="project-card">
+      <div class="project-title">Portfolio Project</div>
+      <img src="images/web.png" alt="Portfolio Project" />
+    </a>
+  </section>
+
+  </section>
 
 <main class="main-content">
 <section id="courses" style="margin-top: 50px;">
