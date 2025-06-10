@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-
-
 <!-- HTML -->
 
 <!-- Top Nav: Connect the Nav Options to corresponding Locations -->
@@ -35,30 +33,56 @@
   <section id="home" class="home-section">
     <div class="home-overlay">
       <p>PORTFOLIO</p>
-      <img src="images/Headshot_Jan2025.jpg" alt="Hailey Reed Headshot" class="headshot-img">
+      <img src="images/LinkedIn_headshot.jpg" alt="Hailey Reed Headshot" class="headshot-img">
       <h1>Hailey Reed</h1>
       <p>Undergrad | Computational Data Analytics</p>
     </div>
   </section>
 
+  <!-- CV Research Heading -->
+ <section class="custom-section">
+  <h2 class="custom-heading">Computer Vision Research</h2>
+ </section>
 
-  <section class="projects-section" id="portfolio">
-  <h2>Research Projects</h2>
-  <p>Below are projects that I worked on as an Undergraduate Research Assistant</p>
-  <div class="projects-grid">
-    <a href="quant.html" class="project-card" style="background-image: url('images/quant.png');">
-    </a>
-    <a href="cv.html" class="project-card" style="background-image: url('images/CV.png');">
-    </a>
-  </div>
+ <!-- CV Research Body -->
+ <section class="subpage-project">
+   <div class="project-text">
+     <h4>Improving Image Segmentation using Few-Shot Learning</h4>
+     <p>I'm researching few-shot learning in computer vision to develop a Semi-Siamese Neural Network for detecting changes in manufactured products. Using PyTorch, I’ve trained and evaluated U-Net and Semi-Siamese models against state-of-the-art benchmarks, refining them for real-world factory conditions. Through the Accelerate UConn program, I’m collaborating with faculty and PhD mentors to transition this research into a deployable industrial product.</p>
+     <a href="cv.html" target="_blank">Click to See More</a>
+   </div>
+
+   <a href="cv.html" target="_blank" class="project-card">
+     <div class="project-title">Computer Vision Research</div>
+     <img src="images/CV.png" alt="Computer Vision Research" />
+   </a>
+ </section>
+
+
+   <!-- Quant Research Heading -->
+  <section class="custom-section">
+   <h2 class="custom-heading">Quant Finance Research</h2>
   </section>
 
-  <section class="projects-section" id="portfolio">
-  <h2>Applied AI/ML Projects</h2>
+ <!-- Quant Research Body -->
+ <section class="subpage-project">
+   <div class="project-text">
+     <h4>Financial Time Series Modeling for Quantitative Finance</h4>
+     <p>I'm currently conducting research on modeling and forecasting financial time series using machine learning. My work involves developing quantitative models in Python to identify predictive market indicators, explore alpha generation strategies, and evaluate model performance within algorithmic trading frameworks.</p>
+     <a href="quant.html" target="_blank">Click to See More</a>
+   </div>
 
-  <!-- Generative AI Heading -->
-  <section class="coursework-section">
-    <h2>Decision Trees</h2>
+
+   <a href="quant.html" target="_blank" class="project-card">
+     <div class="project-title">Quant Finance Research</div>
+     <img src="images/quant.png" alt="Quant Finance Research" />
+   </a>
+ </section>
+
+
+  <!-- Machine Learning Projects Heading -->
+  <section class="custom-section">
+   <h2 class="custom-heading">Machine Learning Projects</h2>
   </section>
 
   <!-- Credit Card Fraud Detection -->
@@ -76,34 +100,24 @@
     </a>
   </section>
 
-  <!-- Generative AI Heading -->
-  <section class="coursework-section">
-    <h2>Generative AI</h2>
-  </section>
-
-    <!-- Project 1: Stable Diffusion -->
-    <section class="subpage-project">
-      <div class="project-text">
-        <h4>Stable Diffusion (CLIP + U-Net)</h4>
-        <p>This project utilizes <strong>Stable Diffusion</strong>, a pipeline of pretrained modules that work together to generate images by reversing the diffusion process. It breaks down the text-to-image generation workflow into three core stages:</p>
-        <ul>
-            <li><strong>Text Embedding</strong> – The input prompt is tokenized and transformed into embeddings using Google’s <em>CLIP</em> model.</li>
-            <li><strong>Denoising with U-Net</strong> – A <em>diffuser</em> model (U-Net) takes the CLIP embeddings and an initial latent of pure noise, and iteratively denoises it using the text guidance.</li>
-            <li><strong>Image Reconstruction</strong> – The final denoised latent is passed through a <em>VAE decoder</em> to generate the full-resolution image.</li>
-        </ul>
-        <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank" class="project-card">
-        <div class="project-title">Stable Diffusion</div>
-        <img src="images/stable_diff.png" alt="Stable Diffusion" />
-        </a>
-      </div>
-    </section>
-
-  <!-- Generative AI Heading -->
-  <section class="coursework-section">
-    <h2>Pathfinding Algorithms</h2>
+  <!-- Project: Stable Diffusion -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>Stable Diffusion (CLIP + U-Net)</h4>
+      <p>This project utilizes <strong>Stable Diffusion</strong>, a pipeline of pretrained modules that work together to generate images by reversing the diffusion process. It breaks down the text-to-image generation workflow into three core stages:</p>
+      <ul>
+          <li><strong>Text Embedding</strong> – The input prompt is tokenized and transformed into embeddings using Google’s <em>CLIP</em> model.</li>
+          <li><strong>Denoising with U-Net</strong> – A <em>diffuser</em> model (U-Net) takes the CLIP embeddings and an initial latent of pure noise, and iteratively denoises it using the text guidance.</li>
+          <li><strong>Image Reconstruction</strong> – The final denoised latent is passed through a <em>VAE decoder</em> to generate the full-resolution image.</li>
+      </ul>
+      <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank" class="project-card">
+      <div class="project-title">Stable Diffusion</div>
+      <img src="images/stable_diff.png" alt="Stable Diffusion" />
+      </a>
+    </div>
   </section>
 
   <!-- AI Project Section -->
@@ -120,11 +134,6 @@
     </a>
   </section>
 
-  <!-- Generative AI Heading -->
-  <section class="coursework-section">
-    <h2>Web Tools/Front End</h2>
-  </section>
-
   <!-- Portfolio -->
   <section class="subpage-project">
     <div class="project-text">
@@ -137,8 +146,6 @@
       <div class="project-title">Portfolio Project</div>
       <img src="images/web.png" alt="Portfolio Project" />
     </a>
-  </section>
-
   </section>
 
 <main class="main-content">
