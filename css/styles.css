@@ -1,6 +1,16 @@
 html {
   scroll-behavior: auto;
 }
+html {
+  scroll-padding-top: 100px; /* Adjust to match your navbar height */
+}
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 135px;  /* ✅ matches the new taller nav */
+  }
+}
+
+
 body {
   margin: 0;
   font-family: 'Poppins';
@@ -69,6 +79,28 @@ h1 {
   border-radius: 4px;
   margin-left: 5px;
   vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;   /* ✅ center horizontally */
+    justify-content: center; /* ✅ optional but helps balance */
+    gap: 0.5rem;
+    text-align: center;     /* ✅ center the nav-title text */
+  }
+
+  .nav-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .top-nav nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center; /* ✅ center the nav links */
+    padding-left: 0;
+    margin: 0;
+  }
 }
 
 
@@ -160,7 +192,7 @@ h1 {
 }
 
 /* Section Headings */
-.about-plain h1, .projects-section h2, .contact-info h2, .main-content h2, .main-content h3 {
+.about-plain h1, .projects-section h2, .main-content h2, .main-content h3 {
   color: #2F4156;
 }
 
@@ -248,6 +280,27 @@ h1 {
   text-align: center;
   position: relative;
 }
+
+.contact-section h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-family: 'Playfair Display', serif;
+  color: #2F4156;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 3.5rem 0 1.5rem;
+  text-align: center;
+  position: relative;
+}
+.contact-section h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 80px;
+  background: #cbcbfb; /* or a darker underline if you prefer */
+  margin: 0.5rem auto 0;
+}
+
 
 .contact-overlay {
   padding: 2rem;
@@ -402,7 +455,6 @@ footer a {
 
   .nav-container {
     flex-direction: column;
-    align-items: center;
     gap: 0.5rem;
   }
 
@@ -606,13 +658,124 @@ footer a {
     margin-bottom: 0.5rem;
   }
 
-  /* Subpage Project */
+
+/* Subpage Project */
+.subpage-project {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.subpage-project .project-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  color: #2F4156;
+}
+
+.subpage-project .project-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.subpage-project .project-card:hover {
+  transform: scale(1.03);
+}
+
+.subpage-project .project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.subpage-project .project-title {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.subpage-project h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.subpage-project h2 {
+  font-size: clamp(1.9rem, 4.5vw, 2.75rem);
+}
+
+.subpage-project h3 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.subpage-project h4 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.subpage-project p,
+.subpage-project .project-text ul,
+.subpage-project .project-text li {
+  font-size: clamp(1rem, 1.75vw, 1.125rem);
+  line-height: 1.6;
+  color: #333;
+}
+
+.subpage-project .project-text ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.subpage-project .project-text li {
+  margin-bottom: 0.5rem;
+}
+
+.subpage-project .project-text a {
+  color: #2F4156;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Responsive: stack for small screens */
+@media (max-width: 768px) {
+  .subpage-project {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subpage-project .project-text {
+    text-align: center;
+  }
+}
+
+
+  /* Subpage Project 
   .subpage-project {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    margin: 4rem auto;
+    gap: 1rem;
+    margin: 2 auto;
     max-width: 1000px;
     padding: 0 1rem;
     flex-wrap: wrap;
@@ -641,19 +804,19 @@ footer a {
   }
 
   .subpage-project p {
-    font-size: clamp(1rem, 1.75vw, 1.125rem);  /* 🔧 lowered max */
+    font-size: clamp(1rem, 1.75vw, 1.125rem); 
     line-height: 1.6;
     color: #333;
   }
   .subpage-project .project-text ul {
-    font-size: clamp(1rem, 1.75vw, 1.125rem);  /* 🔧 lowered max */
+    font-size: clamp(1rem, 1.75vw, 1.125rem); 
     padding-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
   .subpage-project .project-text li {
-    font-size: clamp(1rem, 1.75vw, 1.125rem);  /* 🔧 lowered max */
+    font-size: clamp(1rem, 1.75vw, 1.125rem);
     margin-bottom: 0.5rem;
     line-height: 1.5;
   }
@@ -665,7 +828,7 @@ footer a {
   .subpage-project .project-card {
     flex: 1;
     max-width: 400px;
-    height: 400px; /* Same height for all cards */
+    height: 400px; 
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -692,6 +855,10 @@ footer a {
     font-size: 1.1rem;
     font-family: 'Playfair Display', serif;
   }
+*/
+
+
+
 
   /* Projects and Skills */
 /*
