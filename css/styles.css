@@ -32,7 +32,7 @@ h1 {
 .top-nav {
   width: 100%;
   transition: top 0.3s ease;
-  background-color: #F5EFEB;
+  background-color: #fff;
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
@@ -122,15 +122,16 @@ h1 {
 
 /* INTEX.HTML --> HOME SECTION */
 .home-section {
-  background: url('../images/minimal.png') no-repeat center center/cover;
-  color: #fff;
+  border-top: 4px solid #2F4156;
+  background-color: #CCDEEB;
+  border-bottom: 4px solid #2F4156;
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .home-overlay {
@@ -254,21 +255,38 @@ h1 {
 
 .about-elements {
   display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  gap: 2rem; /* Optional: Adds space between items */
 }
 
 .about-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .about-item img {
-  width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   border-radius: 12px;
+}
+
+/* Special case to reverse the layout */
+.about-item.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .about-item,
+  .about-item.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-item img {
+    max-width: 100%;
+  }
 }
 
 .about-text {
@@ -289,8 +307,8 @@ h1 {
 
 /* INDEX.HTML --> CONTACT */
 .contact-section {
-  background: url('../images/minimal.png') no-repeat center center/cover;
-  color: #2F4156;
+  border-top: 4px solid #2F4156;
+  background-color: #CCDEEB;
   font-family: 'Playfair Display', serif;
   padding: 4rem 2rem;
   text-align: center;
@@ -365,7 +383,7 @@ h1 {
 
 .contact-form button {
   padding: 0.75rem;
-  background-color: #F5EFEB;
+  background-color: #fff;
   color: #2F4156;
   border: none;
   border-radius: 8px;
@@ -376,16 +394,16 @@ h1 {
 }
 
 .contact-form button:hover {
-  background-color: #bec2d4;
+  background-color: #bed6e7;
 }
 
 /* Footer */
 footer {
-  background-color: #F5EFEB;
+  border-top: 4px solid #2F4156;
+  background-color: #fff;
   color: #2F4156;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
   font-family: 'Playfair Display', serif;
 }
 footer a {
@@ -681,6 +699,7 @@ footer a {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  align-items: center; /* ✅ Vertically centers the text & card */
   gap: 2rem;
   margin: 3rem auto;
   max-width: 1000px;
