@@ -396,12 +396,12 @@ a:hover {
   color: #2F4156;
 }
 
-/* Tap indicator - only visible on mobile */
-.tap-indicator {
+/* Flip button - only visible on mobile */
+.flip-btn {
   display: none;
 }
 
-/* Mobile: Make cards clickable instead of hover */
+/* Mobile: Make cards clickable via button instead of hover */
 @media (max-width: 768px) {
   .flip-cards-container {
     grid-template-columns: 1fr;
@@ -421,21 +421,29 @@ a:hover {
     transform: none;
   }
 
-  .tap-indicator {
+  .flip-btn {
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(47, 65, 86, 0.85);
+    background-color: rgba(47, 65, 86, 0.9);
     color: #fff;
     padding: 0.75rem 1.5rem;
+    border: 2px solid #fff;
     border-radius: 25px;
     font-size: 0.9rem;
-    font-weight: 500;
-    pointer-events: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
     z-index: 10;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .flip-btn:active {
+    transform: translate(-50%, -50%) scale(0.95);
+    background-color: #2F4156;
   }
 }
 

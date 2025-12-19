@@ -110,13 +110,13 @@
         <div class="flip-card-front">
           <img src="images/microscop.png" alt="Microscopy Hackathon">
           <div class="flip-card-title">Microscopy Hackathon</div>
-          <div class="tap-indicator">Tap to flip</div>
+          <button class="flip-btn">Tap to flip</button>
         </div>
         <div class="flip-card-back">
           <h4>Microscopy Hackathon</h4>
           <p>in progress...</p>
           <a href="" target="_blank">View Submission →</a>
-          <div class="tap-indicator">Tap to flip back</div>
+          <button class="flip-btn">Tap to flip back</button>
         </div>
       </div>
     </div>
@@ -127,13 +127,13 @@
         <div class="flip-card-front">
           <img src="images/fraud.png" alt="Credit Card Fraud Detection">
           <div class="flip-card-title">Credit Card Fraud Detection</div>
-          <div class="tap-indicator">Tap to flip</div>
+          <button class="flip-btn">Tap to flip</button>
         </div>
         <div class="flip-card-back">
           <h4>Credit Card Fraud Detection</h4>
           <p>Implements the Balanced Random Forest (BRF) algorithm to detect fraudulent transactions in highly imbalanced datasets. Uses balanced bootstrapping and unpruned decision trees to improve sensitivity to minority class instances while maintaining strong overall performance.</p>
           <a href="https://github.com/haileyannreed/Credit-Card-Fraud-Detection" target="_blank">View on GitHub →</a>
-          <div class="tap-indicator">Tap to flip back</div>
+          <button class="flip-btn">Tap to flip back</button>
         </div>
       </div>
     </div>
@@ -144,13 +144,13 @@
         <div class="flip-card-front">
           <img src="images/stable_diff.png" alt="Stable Diffusion">
           <div class="flip-card-title">Stable Diffusion</div>
-          <div class="tap-indicator">Tap to flip</div>
+          <button class="flip-btn">Tap to flip</button>
         </div>
         <div class="flip-card-back">
           <h4>Stable Diffusion (CLIP + U-Net)</h4>
           <p>A pipeline of pretrained modules for text-to-image generation using CLIP embeddings, U-Net denoising, and VAE decoding. Demonstrates the power of combining transformer-based language models with diffusion-based image generation.</p>
           <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank">View on GitHub →</a>
-          <div class="tap-indicator">Tap to flip back</div>
+          <button class="flip-btn">Tap to flip back</button>
         </div>
       </div>
     </div>
@@ -161,13 +161,13 @@
         <div class="flip-card-front">
           <img src="images/Rom.png" alt="AI Honors Project">
           <div class="flip-card-title">AI Search Algorithms</div>
-          <div class="tap-indicator">Tap to flip</div>
+          <button class="flip-btn">Tap to flip</button>
         </div>
         <div class="flip-card-back">
           <h4>AI Honors Project</h4>
           <p>Explores and visualizes classic search algorithms including BFS, DFS, UCS, Greedy Best-First Search, and A*. Interactive visualization shows traversal paths across a map of Romania to analyze efficiency and behavior.</p>
           <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">View on GitHub →</a>
-          <div class="tap-indicator">Tap to flip back</div>
+          <button class="flip-btn">Tap to flip back</button>
         </div>
       </div>
     </div>
@@ -286,26 +286,18 @@
       }
     });
 
-    // Flip cards on click/tap for mobile/tablet
-    const flipCards = document.querySelectorAll('.flip-card');
-    flipCards.forEach(card => {
-      card.addEventListener('touchstart', function(e) {
-        if (window.innerWidth <= 768) {
-          const inner = this.querySelector('.flip-card-inner');
-          const isFlipped = inner.classList.contains('flipped');
-
-          // If flipped and user taps the link, allow it to work
-          if (isFlipped && e.target.tagName === 'A') {
-            return;
-          }
-
-          e.preventDefault();
-          inner.classList.toggle('flipped');
-        }
+    // Flip cards on button click for mobile
+    const flipButtons = document.querySelectorAll('.flip-btn');
+    flipButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const card = this.closest('.flip-card');
+        const inner = card.querySelector('.flip-card-inner');
+        inner.classList.toggle('flipped');
       });
-
-      // Desktop hover behavior remains unchanged
     });
+
+    // Desktop hover behavior remains unchanged
   </script>
 </body>
 </html>
