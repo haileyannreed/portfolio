@@ -430,27 +430,38 @@ a:hover {
 
   .flip-card-inner {
     transform: none !important;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 
   .flip-card-front,
   .flip-card-back {
-    position: relative;
+    position: static;
     backface-visibility: visible;
     transform: none !important;
+    width: 100%;
+    height: auto;
   }
 
   .flip-card-front {
     display: block;
     height: 250px;
+    border-radius: 20px 20px 0 0;
   }
 
   .flip-card-front img {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
+    width: 100%;
   }
 
   .flip-card-title {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
   }
 
   .flip-card-back {
