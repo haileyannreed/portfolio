@@ -318,6 +318,14 @@ a:hover {
   transform: rotateY(180deg);
 }
 
+.flip-card:hover .flip-card-back {
+  z-index: 10;
+}
+
+.flip-card:hover .flip-card-front {
+  z-index: 0;
+}
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;
