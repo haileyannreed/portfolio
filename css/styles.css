@@ -401,6 +401,11 @@ a:hover {
   display: none;
 }
 
+/* Flipped state - works on all devices */
+.flip-card-inner.flipped {
+  transform: rotateY(180deg) !important;
+}
+
 /* Mobile: Show flip buttons and disable hover */
 @media (max-width: 768px) {
   .flip-cards-container {
@@ -411,10 +416,6 @@ a:hover {
 
   .flip-card {
     height: 350px;
-  }
-
-  .flip-card-inner.flipped {
-    transform: rotateY(180deg);
   }
 
   .flip-card:hover .flip-card-inner {
