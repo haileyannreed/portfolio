@@ -396,9 +396,30 @@ a:hover {
   color: #2F4156;
 }
 
-/* Flip button - only visible on mobile */
+/* Flip button - visible on all devices for now */
 .flip-btn {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(47, 65, 86, 0.9);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.flip-btn:active {
+  transform: translate(-50%, -50%) scale(0.95);
+  background-color: #2F4156;
 }
 
 /* Mobile: Make cards clickable via button instead of hover */
@@ -419,31 +440,6 @@ a:hover {
 
   .flip-card:hover .flip-card-inner {
     transform: none;
-  }
-
-  .flip-btn {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(47, 65, 86, 0.9);
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-  }
-
-  .flip-btn:active {
-    transform: translate(-50%, -50%) scale(0.95);
-    background-color: #2F4156;
   }
 }
 
