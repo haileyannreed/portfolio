@@ -466,7 +466,9 @@ a:hover {
   }
 
   .flip-card-title {
-    display: none;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
   }
 
   .flip-card-back {
