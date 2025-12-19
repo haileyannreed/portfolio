@@ -278,26 +278,44 @@
       }
     });
 
-    // Flip cards on click/tap for mobile/tablet - works on all screen sizes
+    // Flip cards on click/tap for mobile/tablet
     const flipCards = document.querySelectorAll('.flip-card');
     flipCards.forEach(card => {
-      card.addEventListener('click', function(e) {
-        // Only use click flip on mobile/tablet (≤768px)
+      let touchStartTime = 0;
+
+      card.addEventListener('touchstart', function(e) {
         if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const inner = this.querySelector('.flip-card-inner');
-          inner.classList.toggle('flipped');
+          touchStartTime = new Date().getTime();
+        }
+      }, { passive: true });
+
+      card.addEventListener('touchend', function(e) {
+        if (window.innerWidth <= 768) {
+          const touchEndTime = new Date().getTime();
+          const touchDuration = touchEndTime - touchStartTime;
+
+          // Only flip if it's a tap (not a scroll/swipe)
+          if (touchDuration < 500) {
+            e.preventDefault();
+            e.stopPropagation();
+            const inner = this.querySelector('.flip-card-inner');
+            inner.classList.toggle('flipped');
+
+            // Prevent link from opening when flipping back
+            const backLink = this.querySelector('.flip-card-back a');
+            if (backLink && !inner.classList.contains('flipped')) {
+              setTimeout(() => {
+                backLink.style.pointerEvents = 'none';
+                setTimeout(() => {
+                  backLink.style.pointerEvents = 'auto';
+                }, 100);
+              }, 0);
+            }
+          }
         }
       });
 
-      // Add touch support for better mobile experience
-      card.addEventListener('touchend', function(e) {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const inner = this.querySelector('.flip-card-inner');
-          inner.classList.toggle('flipped');
-        }
-      });
+      // Desktop hover behavior remains unchanged
     });
   </script>
 </body>
