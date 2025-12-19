@@ -286,14 +286,21 @@
       }
     });
 
-    // Flip cards on button click for mobile
-    const flipButtons = document.querySelectorAll('.flip-btn');
-    flipButtons.forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const card = this.closest('.flip-card');
-        const inner = card.querySelector('.flip-card-inner');
-        inner.classList.toggle('flipped');
+    // Flip cards on button click
+    document.addEventListener('DOMContentLoaded', function() {
+      const flipButtons = document.querySelectorAll('.flip-btn');
+      console.log('Found flip buttons:', flipButtons.length);
+
+      flipButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          console.log('Button clicked!');
+          e.preventDefault();
+          e.stopPropagation();
+          const card = this.closest('.flip-card');
+          const inner = card.querySelector('.flip-card-inner');
+          inner.classList.toggle('flipped');
+          console.log('Toggled flipped class');
+        });
       });
     });
 
