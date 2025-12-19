@@ -280,32 +280,7 @@
       }
     });
 
-    // Flip cards on button click
-    document.addEventListener('DOMContentLoaded', function() {
-      const flipButtons = document.querySelectorAll('.flip-btn');
-      console.log('Found flip buttons:', flipButtons.length);
-
-      flipButtons.forEach((btn, index) => {
-        console.log('Adding listener to button', index);
-        btn.addEventListener('click', function(e) {
-          console.log('Button clicked!', index);
-          e.preventDefault();
-          e.stopPropagation();
-          // Navigate up: button -> flip-card-front/back -> flip-card-inner
-          const inner = this.parentElement.parentElement;
-          console.log('Parent element:', this.parentElement);
-          console.log('Inner element:', inner);
-          if (inner && inner.classList.contains('flip-card-inner')) {
-            inner.classList.toggle('flipped');
-            console.log('Toggled flipped class');
-          } else {
-            console.log('Could not find flip-card-inner');
-          }
-        });
-      });
-    });
-
-    // Desktop hover behavior remains unchanged
+    // Desktop hover behavior for flip cards works automatically via CSS
   </script>
 </body>
 </html>
