@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hailey Reed | Portfolio</title>
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<!-- HTML -->
-
-<!-- Top Nav: Connect the Nav Options to corresponding Locations -->
 <body>
+  <!-- Navigation -->
   <header class="top-nav">
     <div class="nav-container">
       <div class="nav-title">Hailey Reed</div>
@@ -25,17 +23,13 @@
           <li><a href="#ai">AI/ML</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="Resume_July2025.pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
+          <li><a href="Resume_(Dec2025).pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-
-
-
-
-  <!-- Home Page [NOT part of main content] because I used a background image and do not want it following the same rules -->
+  <!-- Home Section -->
   <section id="home" class="home-section">
     <div class="home-overlay">
       <p>PORTFOLIO</p>
@@ -45,119 +39,138 @@
     </div>
   </section>
 
-
-
-
-
-
-  <!-- CV Research Heading -->
+  <!-- Computer Vision Section -->
   <section id="cv" class="custom-section">
-  <h2 class="custom-heading">Computer Vision Research</h2>
- </section>
+    <h2 class="custom-heading">Computer Vision Research</h2>
+  </section>
 
-  <!-- Project 1: LitheVision -->
+  <!-- DeltaSegment Project -->
   <section class="subpage-project">
     <div class="project-text">
-      <h4>LitheVision - A Data-Efficient AI Startup for Defect Detection</h4>
-      <p>After assisting in computer vision research on Improving Image Segmentation using Few-Shot Learning under Professor Qian Yang in the Scientific & Computational Machine Learning Laboratory (SciMaLL), I was invited to participate in the NSF I-Corps UConn Accelerate Program as an Entrepreneurial Lead. This opportunity enabled us to explore the commercial potential of our semi-siamese neural network architecture, with the goal of transforming it into a deployable product for real-world defect detection.</p>
-      <p>LitheVision emerged from this work as a data-efficient computer vision system designed for manufacturing environments where traditional models often fail due to limited or noisy training data. Our system aims to provide a scalable, accurate, and cost-effective alternative to manual quality inspection.</p>
-      <p>Through the I-Corps program and customer discovery, we’ve refined our value proposition and are actively exploring industry use cases where LitheVision can have real impact.</p>
+      <h4>DeltaSegment</h4>
+      <h5>Multi-Fidelity Medical Image Segmentation via Change Detection</h5>
+      <p>DeltaSegment is a research project that reframes medical image segmentation as a multi-fidelity change detection problem, designed for settings where labeled medical data are scarce and expensive to obtain. Instead of relying on large annotation budgets, the method pairs each high-fidelity medical image with a low-fidelity counterpart generated via color quantization. These paired inputs are processed by a Semi-Siamese neural network, after which the difference between their learned feature representations is passed to a downstream convolutional network to generate the final segmentation.</p>
+      <p>This architecture encourages the model to focus on structural differences and boundary information revealed through multi-fidelity comparisons, rather than relying solely on appearance cues in high-fidelity images. Built on a U-Net backbone, the design enables data-efficient learning without additional data collection or pretraining, making it well-suited for small-dataset medical imaging tasks.</p>
+      <p>DeltaSegment was evaluated on three widely used histopathology benchmarks (GlaS, MoNuSeg, and TNBC), where it achieves consistent improvements in Dice and IoU over strong CNN- and transformer-based baselines. The work includes extensive ablation studies analyzing feature fusion strategies, low-fidelity construction methods, and resolution trade-offs.</p>
+      <p>This work was conducted in the Scientific & Computational Machine Learning Laboratory (SciMaLL) at the University of Connecticut and has been submitted to the IEEE International Symposium on Biomedical Imaging (ISBI) 2026 (under review).</p>
+      <a href="DeltaSegment_ISBI_Submitted.pdf" target="_blank">Preprint (submitted to IEEE ISBI 2026)</a>
+    </div>
+    <a href="DeltaSegment_ISBI_Submitted.pdf" target="_blank" class="project-card">
+      <div class="project-title">Preprint (submitted to IEEE ISBI 2026)</div>
+      <img src="images/Delta.png" alt="DeltaSegment">
+    </a>
+  </section>
+  <!-- LitheVision Project -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>LitheVision</h4>
+      <h5>AI-Driven Visual Inspection for Manufacturing Quality Control</h5>
+      <p>LitheVision is an early-stage computer vision startup developing robust, learning-based visual inspection systems for manufacturing quality control. Its core system is built on a Siamese-style deep learning architecture for change detection, enabling direct comparison between nominal (reference) and observed states while remaining resilient to environmental variation. By combining this architecture with multi-modal image analysis, LitheVision identifies subtle defects and anomalies that traditional rule-based inspection systems often miss, particularly under variable lighting, camera angles, and material conditions.</p>
+      <p>The project was developed through Accelerate UConn, the University of Connecticut’s National Science Foundation Innovation Corps (NSF I-Corps) program, where my partner and I conducted extensive customer discovery, validated market need, and refined the technical and commercial problem space through direct interviews with manufacturers and industry stakeholders.</p>
+      <p>LitheVision is currently advancing from technical validation to commercialization and is preparing a formal venture submission for the Rice Business Plan Competition, focusing on scalable deployment of AI-powered inspection tools that reduce reliance on manual inspection while improving reliability and consistency in high-stakes manufacturing environments.</p>
       <a href="https://www.lithevision.org/" target="_blank">LitheVision Website</a>
     </div>
-    <div class="project-card">
-      <a href="https://www.lithevision.org/" target="_blank" class="project-card">
-      <div class="project-title">LitheVision</div>
-      <img src="images/lithe_logo.png" alt="LitheVision" />
-      </a>
-    </div>
+    <a href="https://www.lithevision.org/" target="_blank" class="project-card">
+      <div class="project-title">LitheVision Website</div>
+      <img src="images/lithe_logo.png" alt="LitheVision">
+    </a>
   </section>
 
-  <!-- Project: Stable Diffusion -->
-  <section class="subpage-project">
-    <div class="project-text">
-      <h4>Stable Diffusion (CLIP + U-Net)</h4>
-      <p>This project utilizes <strong>Stable Diffusion</strong>, a pipeline of pretrained modules that work together to generate images by reversing the diffusion process. It breaks down the text-to-image generation workflow into three core stages:</p>
-      <ul>
-          <li><strong>Text Embedding</strong> – The input prompt is tokenized and transformed into embeddings using Google’s <em>CLIP</em> model.</li>
-          <li><strong>Denoising with U-Net</strong> – A <em>diffuser</em> model (U-Net) takes the CLIP embeddings and an initial latent of pure noise, and iteratively denoises it using the text guidance.</li>
-          <li><strong>Image Reconstruction</strong> – The final denoised latent is passed through a <em>VAE decoder</em> to generate the full-resolution image.</li>
-      </ul>
-      <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank">View on GitHub</a>
-    </div>
-    <div class="project-card">
-      <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank" class="project-card">
-      <div class="project-title">Stable Diffusion</div>
-      <img src="images/stable_diff.png" alt="Stable Diffusion" />
-      </a>
-    </div>
-  </section>
-
-
-
-  <!-- Quant Research Heading -->
+  <!-- Quantitative Modeling Section -->
   <section id="quant" class="custom-section">
-  <h2 class="custom-heading">Quantitative Modeling</h2>
+    <h2 class="custom-heading">Quantitative Modeling</h2>
   </section>
 
-  <!-- Quant Research Body -->
- <section class="subpage-project">
-   <div class="project-text">
-     <h4>Financial Time Series Modeling for Quantitative Finance</h4>
-     <p>I'm currently conducting research on modeling and forecasting financial time series using machine learning. My work involves developing quantitative models in Python to identify predictive market indicators, explore alpha generation strategies, and evaluate model performance within algorithmic trading frameworks.</p>
-     <a href="quant.html" target="_blank">Click to See More</a>
-   </div>
+  <!-- Quant Finance Project -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>Quant Research: GDP Nowcasting with FRED-MD</h4>
+      <h5>Time-Series Modeling and Interactive Visualization for Real-Time Economic Forecasting</h5>
+      <p>This project focuses on real-time GDP nowcasting using the FRED-MD panel of 126 monthly macroeconomic indicators, addressing the delay between economic activity and official GDP releases. Rather than relying solely on covariance-based statistical models, the work explores how neural network architectures can learn temporal dependencies, distinguish leading from lagging indicators, and adapt to realistic forecasting constraints.</p>
+      <p>I implemented and evaluated multiple neural forecasting models, including MLPs, CNNs, RNNs, LSTMs, and GRUs, using carefully constructed input sequences and real-time information sets that reflect data availability within each target quarter. Model performance is assessed under both stable and turbulent economic regimes and benchmarked against a naive persistence model and a Dynamic Factor Model (DFM). Results show that model effectiveness is highly regime-dependent, motivating adaptive or ensemble-based forecasting strategies rather than reliance on a single architecture.</p>
+      <p>In parallel, I designed and built an interactive Plotly Dash dashboard that integrates data preprocessing, sequence construction, and model evaluation into a unified visualization framework. The dashboard enables users to explore indicator behavior, examine leading versus lagging dynamics, and compare model predictions across economic conditions. This work was developed as part of a graduate-level Data Visualization and Communication course, and an accompanying paper documents the full pipeline, methodological choices, and insights from the visualization-driven analysis.</p>
+      <a href="GDP_Nowcasting.pdf" target="_blank">Data Visualization Paper</a>
+    </div>
+    <a href="GDP_Nowcasting.pdf" target="_blank" class="project-card">
+      <div class="project-title">Data Visualization Paper</div>
+      <img src="images/I.png" alt="Quant Finance">
+    </a>
+  </section>
 
-
-   <a href="quant.html" target="_blank" class="project-card">
-     <div class="project-title">Quant Finance Research</div>
-     <img src="images/quant.png" alt="Quant Finance Research" />
-   </a>
- </section>
-
-
-
-
-
-  <!-- CV Research Heading -->
+  <!-- AI/ML Projects Section -->
   <section id="ai" class="custom-section">
-  <h2 class="custom-heading">AI/ML Projects</h2>
- </section>
-
-  <!-- Credit Card Fraud Detection -->
-  <section class="subpage-project">
-    <div class="project-text">
-      <h4>Credit Card Fraud Detection</h4>
-      <p>This project implements the Balanced Random Forest (BRF) algorithm to detect fraudulent transactions in the highly imbalanced Credit Card Fraud Detection dataset. By applying balanced bootstrapping and unpruned decision trees, the model improves sensitivity to minority class instances (fraud) while maintaining strong overall performance. The approach closely follows the methodology from the paper "Using Random Forest to Learn Imbalanced Data" by Chen, Liaw, and Breiman (2004), and includes evaluation with metrics like F1-score, G-Mean, and Weighted Accuracy.
-      </p>
-      <a href="https://github.com/haileyannreed/Credit-Card-Fraud-Detection" target="_blank">View on GitHub</a>
-    </div>
-
-    <a href="https://github.com/haileyannreed/Credit-Card-Fraud-Detection" target="_blank" class="project-card">
-      <div class="project-title">Credit Card Fraud Detection</div>
-      <img src="images/fraud.png" alt="Credit Card Fraud Detection" />
-    </a>
+    <h2 class="custom-heading">AI/ML Projects</h2>
   </section>
 
-  <!-- AI Project Section -->
-  <section class="subpage-project">
-    <div class="project-text">
-      <h4>AI Honors Project</h4>
-      <p>This project explores search algorithms including Breadth-First Search, Depth-First Search, Uniform Cost Search, Greedy Best-First Search, and A* Search. I visualized their traversal paths across a map of Romania to analyze their efficiency and behavior.</p>
-      <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">View on GitHub</a>
+  <!-- AI/ML Flip Cards Grid -->
+  <section class="flip-cards-container">
+    <!-- Microscopy Hackathon -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/microscop.png" alt="Microscopy Hackathon">
+          <div class="flip-card-title">Microscopy Hackathon</div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Microscopy Hackathon</h4>
+          <p>in progress...</p>
+          <a href="" target="_blank">View Submission →</a>
+        </div>
+      </div>
     </div>
 
-    <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank" class="project-card">
-      <div class="project-title">AI Honors Project</div>
-      <img src="images/Rom.png" alt="AI Honors Project Map" />
-    </a>
+    <!-- Credit Card Fraud Detection -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/fraud.png" alt="Credit Card Fraud Detection">
+          <div class="flip-card-title">Credit Card Fraud Detection</div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Credit Card Fraud Detection</h4>
+          <p>Implements the Balanced Random Forest (BRF) algorithm to detect fraudulent transactions in highly imbalanced datasets. Uses balanced bootstrapping and unpruned decision trees to improve sensitivity to minority class instances while maintaining strong overall performance.</p>
+          <a href="https://github.com/haileyannreed/Credit-Card-Fraud-Detection" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stable Diffusion -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/stable_diff.png" alt="Stable Diffusion">
+          <div class="flip-card-title">Stable Diffusion</div>
+        </div>
+        <div class="flip-card-back">
+          <h4>Stable Diffusion (CLIP + U-Net)</h4>
+          <p>A pipeline of pretrained modules for text-to-image generation using CLIP embeddings, U-Net denoising, and VAE decoding. Demonstrates the power of combining transformer-based language models with diffusion-based image generation.</p>
+          <a href="https://github.com/haileyannreed/Text-to-Image-Generation/tree/main" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Honors Project -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/Rom.png" alt="AI Honors Project">
+          <div class="flip-card-title">AI Search Algorithms</div>
+        </div>
+        <div class="flip-card-back">
+          <h4>AI Honors Project</h4>
+          <p>Explores and visualizes classic search algorithms including BFS, DFS, UCS, Greedy Best-First Search, and A*. Interactive visualization shows traversal paths across a map of Romania to analyze efficiency and behavior.</p>
+          <a href="https://github.com/haileyannreed/Pathfinding-Algorithm-Visualization" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-
-  <!-- Front End Research Heading -->
+  <!-- Front End Section -->
   <section class="custom-section">
-  <h2 class="custom-heading">Front End</h2>
- </section>
-  <!-- Portfolio -->
+    <h2 class="custom-heading">Front End</h2>
+  </section>
+
+  <!-- Portfolio Project -->
   <section class="subpage-project">
     <div class="project-text">
       <p>I love taking on front-end projects when I have the time, as it gives me a creative and artistic outlet alongside my technical work.</p>
@@ -167,25 +180,18 @@
       <p>I also created the front end for the LitheVision website, which you can find in the project section above or visit directly at https://www.lithevision.org/.</p>
       <a href="https://github.com/haileyannreed/portfolio" target="_blank">View on GitHub</a>
     </div>
-
     <a href="https://github.com/haileyannreed/portfolio" target="_blank" class="project-card">
       <div class="project-title">Portfolio Project</div>
-      <img src="images/web.png" alt="Portfolio Project" />
+      <img src="images/web.png" alt="Portfolio Project">
     </a>
   </section>
 
-
-
-
-
-
-
- <!-- Courses & Certifications Research Heading -->
+  <!-- Courses & Certifications Section -->
   <section class="custom-section">
-  <h2 class="custom-heading">Courses & Certifications</h2>
- </section>
+    <h2 class="custom-heading">Courses & Certifications</h2>
+  </section>
 
-   <!-- NSF I-Corps -->
+  <!-- NSF I-Corps -->
   <section class="subpage-project">
     <div class="project-text">
       <h4>NSF I-Corps Propelus Program (Cohort 32)</h4>
@@ -194,119 +200,94 @@
       <p>This experience provided me with a strong foundation in entrepreneurial thinking, technology translation, and early-stage venture development.</p>
       <a href="NSF_Cert.pdf" target="_blank">NSF I-Corps</a>
     </div>
-    <div class="project-card">
-      <a href="NSF_Cert.pdf" target="_blank" class="project-card">
+    <a href="NSF_Cert.pdf" target="_blank" class="project-card">
       <div class="project-title">NSF I-Corps</div>
-      <img src="images/NSF_cert.png" alt="Certification of Completion" />
-      </a>
+      <img src="images/NSF_cert.png" alt="Certification of Completion">
+    </a>
+  </section>
+
+
+    <!-- About Me Section -->
+    <section id="about" class="custom-section">
+      <h2 class="custom-heading">About Me</h2>
+    </section>
+
+    <section class="about-section">
+      <div class="about-elements">
+        <div class="about-item">
+          <img src="images/Beach.png" alt="Lifeguard Photo">
+          <div class="about-text">
+            <h3>BEACH Lifeguard</h3>
+            <p>Outside of my research and coursework, I serve as a Lifeguard at UConn's CSE BEACH (Belonging, Engagement, and Affinity Computer Hangout), where I support the School of Computing community by tutoring undergraduate students in core computer science topics and fostering a welcoming, inclusive environment.</p>
+            <p>In this role, I also help organize faculty-student engagement events, encourage peer collaboration, and contribute to building a strong sense of belonging among CS students from diverse backgrounds.</p>
+          </div>
+        </div>
+
+        <div class="about-item">
+          <img src="images/charlie.png" alt="My dog Charlie">
+          <div class="about-text">
+            <h3>My Dog, Charlie</h3>
+            <p>Beyond academics, I'm passionate about health and wellness. I love cooking, working out, and staying active. I also spend as much time as I can with my golden retriever puppy, Charlie (who occasionally tries to help me code 🐾).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-overlay">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:reedhaileyann@gmail.com">reedhaileyann@gmail.com</a></p>
+      <p>Phone: (475) 224 7376</p>
+      <p>Or use the form:</p>
+
+      <form class="contact-form" action="https://formspree.io/f/movenlbq" method="POST">
+        <input type="text" name="name" placeholder="Your Name *" required>
+        <input type="email" name="email" placeholder="Your Email *" required>
+        <input type="text" name="phone" placeholder="Your Phone">
+        <textarea name="message" placeholder="Your Message *" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </section>
 
-<main class="main-content">
-<section id="courses" style="margin-top: 50px;">
-  <p style="text-align: center;">Additional courses I've completed</p>
-
-  <div style="display: flex; align-items: center; margin: 20px 0;">
-    <img src="images/hvrd.png" alt="Harvard CS50 Logo" class="course-img">
-    <div>
-      <h3>Harvard CS50: Introduction to Computer Science</h3>
-      <p>A foundational course in computer science covering algorithms, data structures, software engineering, and more.</p>
-    </div>
-  </div>
-
-  <div style="display: flex; align-items: center; margin: 20px 0;">
-    <img src="images/mit.png" alt="MIT Deep Learning Logo" class="course-img">
-    <div>
-      <h3>MIT 6.S191: Introduction to Deep Learning</h3>
-      <p>An in-depth course on deep learning techniques, covering neural networks, computer vision, and generative models.</p>
-    </div>
-  </div>
-
-  <div style="display: flex; align-items: center; margin: 20px 0;">
-    <img src="images/uconn.png" alt="UConn Machine Learning Logo" class="course-img">
-    <div>
-      <h3>UConn CSE 5819: Machine Learning [Graduate Course]</h3>
-      <p>A graduate-level course focused on theoretical and practical aspects of modern machine learning methods.</p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-  <!-- About Me Heading -->
-  <section id="about" class="custom-section">
-  <h2 class="custom-heading">About Me</h2>
- </section>
-
-<section class="about-section">
-
-  <div class="about-elements">
-    <div class="about-item">
-      <img src="images/Beach.png" alt="Lifeguard Photo">
-      <div class="about-text">
-        <h3>BEACH Lifeguard</h3>
-        <p>Outside of my research and coursework, I serve as a Lifeguard at UConn’s CSE BEACH (Belonging, Engagement, and Affinity Computer Hangout), where I support the School of Computing community by tutoring undergraduate students in core computer science topics and fostering a welcoming, inclusive environment.</p>
-        <p>In this role, I also help organize faculty-student engagement events, encourage peer collaboration, and contribute to building a strong sense of belonging among CS students from diverse backgrounds.</p>
-      </div>
-    </div>
-
-  <div class="about-item">
-    <div class="about-text">
-      <h3>My Dog, Charlie</h3>
-        <p>Beyond academics, I’m passionate about health and wellness. I love cooking, working out, and staying active. I also spend as much time as I can with my golden retriever puppy, Charlie (who occasionally tries to help me code 🐾).</p>
-    </div>
-    <img src="images/charlie.png" alt="My dog Charlie" />
-  </div>
-</section>
-
-  </main>
-
-    <section id="contact" class="contact-section">
-      <div class="contact-overlay">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:reedhaileyann@gmail.com">reedhaileyann@gmail.com</a></p>
-        <p>Phone: (475) 224 7376</p>
-        <p>Or use the form:</p>
-    
-        <form class="contact-form" action="https://formspree.io/f/movenlbq" method="POST">
-          <input type="text" name="name" placeholder="Your Name *" required>
-          <input type="email" name="email" placeholder="Your Email *" required>
-          <input type="text" name="phone" placeholder="Your Phone">
-          <textarea name="message" placeholder="Your Message *" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-    
-  
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed/">LinkedIn</a></p>
+    <p>&copy; 2025 Hailey Reed | <a href="https://github.com/haileyannreed">GitHub</a> | <a href="https://www.linkedin.com/in/hailey-ann-reed/">LinkedIn</a></p>
   </footer>
 
+  <!-- JavaScript for Navigation Hide/Show and Flip Cards -->
   <script>
+    // Navigation scroll behavior
     let lastScrollTop = 0;
     const nav = document.querySelector('.top-nav');
-  
-    window.addEventListener('scroll', function () {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (window.innerWidth <= 440) { // Only on small screens
+
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (window.innerWidth <= 440) {
         if (scrollTop > lastScrollTop) {
-          // Scrolling down
-          nav.style.top = "-110px"; // hide
+          nav.style.top = "-110px";
         } else {
-          // Scrolling up
-          nav.style.top = "0"; // show
+          nav.style.top = "0";
         }
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
       } else {
-        nav.style.top = "0"; // always show on large screens
+        nav.style.top = "0";
       }
     });
+
+    // Flip cards on click for mobile/tablet
+    if (window.innerWidth <= 768) {
+      const flipCards = document.querySelectorAll('.flip-card');
+      flipCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const inner = this.querySelector('.flip-card-inner');
+          inner.classList.toggle('flipped');
+        });
+      });
+    }
   </script>
-
-
 </body>
 </html>
-

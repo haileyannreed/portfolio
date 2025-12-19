@@ -1,90 +1,121 @@
-html {
-  scroll-behavior: auto;
-}
-html {
-  scroll-padding-top: 100px; /* Adjust to match your navbar height */
-}
-@media (max-width: 768px) {
-  html {
-    scroll-padding-top: 135px;  /* ✅ matches the new taller nav */
-  }
+/* ============================================
+   GLOBAL STYLES & RESET
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
 body {
-  margin: 0;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   background-color: #fdfdfd;
   color: #333;
-  flex-direction: column;
+  line-height: 1.6;
   padding-top: 70px;
 }
-h1 {
-  /* 'Hailey Reed' */
+
+h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
   color: #2F4156;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: clamp(1rem, 1.75vw, 1.125rem);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #2F4156;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #C8D9E6;
 }
 
 
-/* INDEX.HTML -->TOP NAV BAR */
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
 .top-nav {
-  width: 100%;
-  transition: top 0.3s ease;
-  background-color: #fff;
-  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 2rem;
   border-bottom: 4px solid #2F4156;
-  box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
+  z-index: 1000;
+  transition: top 0.3s ease;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
+
 .nav-title {
-  /* this says: 'Hailey Reed' */
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: bold;
   color: #2F4156;
 }
+
 .top-nav nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  list-style: none;
   gap: 2rem;
 }
+
 .top-nav nav ul li a {
-  /*this says: 'Home' 'Portfolio' 'About Me'...*/
   text-decoration: none;
   color: #2F4156;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
+
 .top-nav nav ul li a:hover {
   color: #C8D9E6;
-}
-@media (max-width: 480px) {
-  .top-nav nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .top-nav nav ul li a {
-    font-size: 0.85rem;
-  }
-
-  .nav-title {
-    font-size: 1rem;
-  }
 }
 
 .pdf-tag {
@@ -96,42 +127,22 @@ h1 {
   margin-left: 5px;
   vertical-align: middle;
 }
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: center;   /* ✅ center horizontally */
-    justify-content: center; /* ✅ optional but helps balance */
-    gap: 0.5rem;
-    text-align: center;     /* ✅ center the nav-title text */
-  }
-
-  .nav-title {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .top-nav nav ul {
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center; /* ✅ center the nav links */
-    padding-left: 0;
-    margin: 0;
-  }
-}
 
 
-/* INTEX.HTML --> HOME SECTION */
+/* ============================================
+   HOME SECTION
+   ============================================ */
+
 .home-section {
+  background-color: #eff1f4;
   border-top: 4px solid #2F4156;
-  background-color: #CCDEEB;
   border-bottom: 4px solid #2F4156;
   padding: 4rem 2rem;
   text-align: center;
-  position: relative;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
 }
 
 .home-overlay {
@@ -142,76 +153,26 @@ h1 {
 }
 
 .home-section p {
-  /* 'portfolio' */
-  /* 'Undergrad | Comp Data Analytics' */
-  font-family: 'Playfair Display', sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   color: #2F4156;
-}
-.headshot-img {
-  width: 25vw;
-  max-width: 400px;
-  min-width: 200px;
-  height: auto;
+  margin-bottom: 1rem;
 }
 
 .headshot-img {
-  width: 400px;
-  height: 400px;
+  width: clamp(200px, 30vw, 400px);
+  height: clamp(200px, 30vw, 400px);
   border-radius: 50%;
-  border: 8px solid #FFF;
+  border: 8px solid #fff;
   object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 12px rgba(0,0,0,0.2);
-}
-
-
-/* INTEX.HTML --> MAIN CONTENT --> Projects & About Me Sections */
-.main-content {
-  padding: 0 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.main-content h3 {
-  /* 'Below are projects that I worked on ...' */
-  font-size: 3rem;
-  color: #2F4156;
-  font-family: 'Playfair Display', serif;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.main-content h2 {
-  /* 'Below are projects that I worked on ...' */
-  font-size: 3rem;
-  color: #2F4156;
-  font-family: 'Playfair Display', serif;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.main-content p {
-  /* Definitions for courses: 'A foundational course in computer science...'*/
-  font-size: 1.25rem;
-  font-family: 'Playfair Display', serif;
-  color: #2F4156;
-  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
-.about-plain {
-  max-width: 1000px;
-  margin: 6rem auto;
-  padding: 0 2rem;
-  text-align: center;
-}
 
-/* Section Headings */
-.about-plain h1, .projects-section h2, .main-content h2, .main-content h3 {
-  color: #2F4156;
-}
+/* ============================================
+   SECTION HEADINGS
+   ============================================ */
 
 .custom-heading {
   font-size: clamp(1.75rem, 4vw, 2.25rem);
@@ -230,15 +191,236 @@ h1 {
   display: block;
   height: 2px;
   width: 80px;
-  background: #cbcbfb; /* or a darker underline if you prefer */
+  background: #2F4156;
   margin: 0.5rem auto 0;
 }
 
-.course-img {
-  width: clamp(90px, 8vw, 120px);
-  height: clamp(90px, 8vw, 120px);
-  margin-right: 50px;
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.main-content {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+
+/* ============================================
+   SUBPAGE PROJECT SECTIONS
+   ============================================ */
+
+.subpage-project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1400px;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.subpage-project .project-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 700px;
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  color: #2F4156;
+}
+
+.subpage-project .project-text ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.subpage-project .project-text li {
+  margin-bottom: 0.5rem;
+}
+
+.subpage-project .project-text a {
+  color: #2F4156;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.subpage-project .project-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  display: block;
+  text-decoration: none;
+}
+
+.subpage-project .project-card:hover {
+  transform: scale(1.03);
+}
+
+.subpage-project .project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.subpage-project .project-title {
+  background-color: rgba(47, 65, 86, 0.9);
+  color: #fff;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+
+/* ============================================
+   FLIP CARDS (AI/ML Projects)
+   ============================================ */
+
+.flip-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 4rem;
+  padding: 0 2rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flip-card-front {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(47, 65, 86, 0.9);
+  color: #fff;
+  padding: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.flip-card-back {
+  background: linear-gradient(135deg, #2F4156 0%, #3d5a73 100%);
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: left;
+}
+
+.flip-card-back h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.flip-card-back p {
+  color: #e8ecf0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.flip-card-back a {
+  color: #CCDEEB;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #CCDEEB;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.flip-card-back a:hover {
+  background-color: #CCDEEB;
+  color: #2F4156;
+}
+
+/* Mobile: Make cards clickable instead of hover */
+@media (max-width: 768px) {
+  .flip-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .flip-card {
+    height: 350px;
+  }
+
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+}
+
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
 
 .about-section {
   padding: 4rem 2rem;
@@ -247,72 +429,57 @@ h1 {
   color: #2F4156;
 }
 
-.about-intro {
-  max-width: 800px;
-  margin: 1rem auto 3rem;
-  font-size: 1.2rem;
-}
-
 .about-elements {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  justify-content: space-between;
-  gap: 2rem; /* Optional: Adds space between items */
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .about-item {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .about-item img {
   max-width: 300px;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
+  flex-shrink: 0;
 }
 
-/* Special case to reverse the layout */
-.about-item.reverse {
+.about-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-@media (max-width: 768px) {
-  .about-item,
-  .about-item.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-item img {
-    max-width: 100%;
-  }
-}
-
 .about-text {
-  text-align: center;
-  max-width: 70%;
+  text-align: left;
+  flex: 1;
 }
 
 .about-text h3 {
   margin-bottom: 0.5rem;
-  color: #2F4156;
 }
 
 .about-text p {
   font-size: 1rem;
-  color: #2F4156;
 }
 
 
-/* INDEX.HTML --> CONTACT */
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+
 .contact-section {
   border-top: 4px solid #2F4156;
-  background-color: #CCDEEB;
+  background-color: #eff1f4;
   font-family: 'Playfair Display', serif;
   padding: 4rem 2rem;
   text-align: center;
-  position: relative;
 }
 
 .contact-section h2 {
@@ -322,19 +489,18 @@ h1 {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin: 3.5rem 0 1.5rem;
-  text-align: center;
+  margin: 1.5rem 0 1.5rem;
   position: relative;
 }
+
 .contact-section h2::after {
   content: '';
   display: block;
   height: 2px;
   width: 80px;
-  background: #cbcbfb; /* or a darker underline if you prefer */
+  background: #2F4156;
   margin: 0.5rem auto 0;
 }
-
 
 .contact-overlay {
   padding: 2rem;
@@ -344,31 +510,30 @@ h1 {
 }
 
 .contact-section p {
-  /* 'Email: reedhaileyann@gmail.com' 'Phone: ...' */
   font-family: 'Playfair Display', serif;
   color: #2F4156;
   margin: 0.5rem 0;
 }
+
 .contact-section a {
   color: #2F4156;
-  text-decoration: none; /* optional: removes underline */
+  text-decoration: none;
 }
+
 .contact-section a:hover {
-  text-decoration: underline; /* or customize hover */
-  color: #1e2a39; /* slightly darker for interaction feedback */
+  text-decoration: underline;
+  color: #1e2a39;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  color: #2F4156;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-  /* Typed Text and 'Send Message' */
   padding: 0.75rem;
   border: none;
   border-radius: 8px;
@@ -379,6 +544,7 @@ h1 {
 
 .contact-form textarea {
   min-height: 120px;
+  resize: vertical;
 }
 
 .contact-form button {
@@ -397,401 +563,66 @@ h1 {
   background-color: #bed6e7;
 }
 
-/* Footer */
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
 footer {
   border-top: 4px solid #2F4156;
   background-color: #fff;
   color: #2F4156;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   font-family: 'Playfair Display', serif;
 }
+
 footer a {
   color: #2F4156;
   text-decoration: underline;
 }
 
 
-/* SCREEN SIZES */
-/* Small Screens (phones) */
-@media (max-width: 600px) {
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 140px;
+  }
+
   body {
-    padding-top: 135px;
+    padding-top: 130px;
   }
 
   .nav-container {
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-  }
-
-  .top-nav nav ul {
-    flex-direction: row;
-    gap: 1rem;
-    padding-left: 0;
-    margin: 0;
+    gap: 0.75rem;
+    text-align: center;
   }
 
   .nav-title {
-    margin-bottom: 0.5rem;
     font-size: 1rem;
   }
 
+  .top-nav nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .top-nav nav ul li a {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .home-section {
-    min-height: 60vh;
+    min-height: 70vh;
     padding: 2rem 1rem;
   }
 
-  .home-overlay {
-    padding: 1rem;
-  }
-
-  .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 2rem;
-  }
-
-  .main-content h3 {
-    font-size: 1.5rem;
-  }
-
-  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .project-card {
-    aspect-ratio: 1 / 1;
-  }
-
-  .about-elements {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-item {
-    max-width: 90%;
-  }
-}
-
-/* Medium Screens (small laptops, tablets) */
-@media (max-width: 1280px) and (min-width: 601px) {
-  body {
-    padding-top: 110px;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .top-nav nav ul {
-    flex-direction: row;
-    gap: 1rem;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  .nav-title {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  .top-nav nav ul li a {
-    font-size: 1rem;
-  }
-
-  .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 2.75rem;
-  }
-
-  .main-content h3 {
-    font-size: 1.75rem;
-  }
-
-  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 1.25rem;
-  }
-}
-
-/* Large Screens (desktops) */
-@media (min-width: 1281px) and (max-width: 3000px) {
-  .home-section {
-    min-height: 85vh;
-  }
-
-  .about-item {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .about-item:nth-child(2) {
-    flex-direction: row-reverse;
-  }
-
-  .about-text {
-    text-align: left;
-  }
-
-  .home-section h1 {
-    font-size: 3rem;
-  }
-  .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 2rem;
-  }
-
-  .home-section p, .main-content h3 {
-    font-size: 1.5rem;
-  }
-
-  .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 1rem;
-  }
-
-  .nav-title {
-    font-size: 1.25rem;
-  }
-
-  .top-nav nav ul li a {
-    font-size: 1rem;
-  }
-
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 3rem;
-    width: 60%;
-    margin: 0 auto;
-  }
-}
-/* Extra Large Screens (ultra-wide monitors) */
-@media (min-width: 3000px) {
-  .home-section h1, .projects-section h2, .main-content h2, .about-section h2, .contact-section h2 {
-    font-size: 4rem;
-  }
-
-  .main-content h3 {
-    font-size: 3rem;
-  }
-
-  .home-section p, .projects-section p, .main-content p, .about-section p, .contact-section p {
-    font-size: 2rem;
-  }
-
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 5rem;
-    max-width: 60%;
-    margin: 0 auto;
-  }
-
-  .nav-title {
-    font-size: 2rem;
-  }
-
-  .top-nav nav ul li a {
-    font-size: 1.5rem;
-  }
-  
-  .about-item {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .about-item:nth-child(2) {
-    flex-direction: row-reverse;
-  }
-
-  .about-text {
-    text-align: left;
-  }
-}
-
-
-  /* SUBPAGE CSS */
-
-  /* Subpage Header Section */
-  .subpage-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 3rem auto 1rem;
-    max-width: 900px;
-    padding: 0 1rem;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .subpage-section img {
-    width: 80px;
-    height: 80px;
-  }
-  .subpage-text h1 {
-    color: #2F4156;
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  .subpage-description {
-    max-width: 800px;
-    margin: 1rem auto;
-    text-align: center;
-    padding: 0 1rem;
-    font-size: 1.1rem;
-  }
-
-  /* Coursework Section */
-  .coursework-section {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 0 1rem;
-    text-align: center;
-  }
-  .coursework-section h2 {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
-    font-family: 'Playfair Display', serif;
-    color: #2F4156;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin: 3.5rem 0 1.5rem;
-    text-align: center;
-    position: relative;
-  }
-
-  .coursework-section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 2px;
-    background: #cbbfbf;
-    margin: 0.5rem auto 0;
-  }
-  .coursework-section ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    text-align: left;
-    display: inline-block;
-    font-size: 1.1rem;
-    color: #333;
-  }
-  .coursework-section li {
-    margin-bottom: 0.5rem;
-  }
-
-
-/* Subpage Project */
-.subpage-project {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  align-items: center; /* ✅ Vertically centers the text & card */
-  gap: 2rem;
-  margin: 3rem auto;
-  max-width: 1000px;
-  padding: 0 1rem;
-  flex-wrap: wrap;
-}
-
-.subpage-project .project-text {
-  flex: 1;
-  min-width: 280px;
-  max-width: 500px;
-  text-align: left;
-  font-family: 'Playfair Display', serif;
-  color: #2F4156;
-}
-
-.subpage-project .project-card {
-  flex: 1;
-  min-width: 280px;
-  max-width: 400px;
-  height: 400px;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.subpage-project .project-card:hover {
-  transform: scale(1.03);
-}
-
-.subpage-project .project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.subpage-project .project-title {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 0.5rem;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 1.1rem;
-  font-family: 'Playfair Display', serif;
-}
-
-.subpage-project h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-
-.subpage-project h2 {
-  font-size: clamp(1.9rem, 4.5vw, 2.75rem);
-}
-
-.subpage-project h3 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-}
-
-.subpage-project h4 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
-.subpage-project p,
-.subpage-project .project-text ul,
-.subpage-project .project-text li {
-  font-size: clamp(1rem, 1.75vw, 1.125rem);
-  line-height: 1.6;
-  color: #333;
-}
-
-.subpage-project .project-text ul {
-  padding-left: 1.5rem;
-  margin: 1rem 0;
-}
-
-.subpage-project .project-text li {
-  margin-bottom: 0.5rem;
-}
-
-.subpage-project .project-text a {
-  color: #2F4156;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Responsive: stack for small screens */
-@media (max-width: 768px) {
   .subpage-project {
     flex-direction: column;
     align-items: center;
@@ -800,52 +631,75 @@ footer a {
 
   .subpage-project .project-text {
     text-align: center;
+    max-width: 100%;
+  }
+
+  .about-item,
+  .about-item:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-item img {
+    max-width: 100%;
+  }
+
+  #courses > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .course-img {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
 
+/* Mobile phones */
+@media (max-width: 480px) {
+  .top-nav {
+    padding: 0.75rem 1rem;
+  }
 
+  .top-nav nav ul {
+    gap: 0.5rem;
+  }
 
+  .top-nav nav ul li a {
+    font-size: 0.85rem;
+  }
 
+  .nav-title {
+    font-size: 0.95rem;
+  }
 
+  .home-section {
+    padding: 1.5rem 1rem;
+  }
 
+  .subpage-project {
+    padding: 0 0.5rem;
+    margin: 2rem auto;
+  }
 
-  /* Projects and Skills */
-/*
-.skills-box {
-  background-color: #f0f4f8;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.projects-section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: none;
-  margin: 0 auto;
-}
-
-.project-card {
-  position: relative;
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  overflow: hidden;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
+  .contact-overlay {
+    padding: 1rem;
+  }
 }
 
-.project-card:hover {
-  transform: scale(1.03);
+/* Large desktops */
+@media (min-width: 1400px) {
+  .nav-container {
+    max-width: 1600px;
+  }
+
+  .main-content,
+  .subpage-project,
+  .about-elements {
+    max-width: 1200px;
+  }
 }
-*/
