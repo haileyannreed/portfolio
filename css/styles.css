@@ -449,7 +449,7 @@ a:hover {
 
   .flip-card-front {
     display: block;
-    height: 250px;
+    height: 200px;
     border-radius: 20px 20px 0 0;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -471,15 +471,16 @@ a:hover {
     left: 0;
     width: 100%;
     z-index: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
   }
 
   .flip-card-back {
     display: block;
     position: relative;
     transform: none;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 0 0 20px 20px;
-    min-height: auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
