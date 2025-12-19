@@ -422,6 +422,7 @@ a:hover {
 
   .flip-card {
     height: auto;
+    perspective: none;
   }
 
   .flip-card:hover .flip-card-inner {
@@ -430,26 +431,28 @@ a:hover {
 
   .flip-card-inner {
     transform: none !important;
-    display: flex;
-    flex-direction: column;
+    transform-style: flat;
+    position: static;
+    display: block;
     height: auto;
   }
 
   .flip-card-front,
   .flip-card-back {
-    position: static;
+    position: relative;
     backface-visibility: visible;
     transform: none !important;
     width: 100%;
     height: auto;
+    box-shadow: none;
   }
 
   .flip-card-front {
     display: block;
     height: 250px;
     border-radius: 20px 20px 0 0;
-    position: relative;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .flip-card-front img {
@@ -459,21 +462,25 @@ a:hover {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: 0;
   }
 
   .flip-card-title {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    width: 100%;
+    z-index: 1;
   }
 
   .flip-card-back {
     display: block;
+    position: relative;
     transform: none;
     padding: 1.5rem;
     border-radius: 0 0 20px 20px;
     min-height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .flip-card-back h4 {
