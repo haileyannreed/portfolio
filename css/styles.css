@@ -465,7 +465,7 @@ a:hover {
     z-index: 0;
   }
 
-  .desktop-only {
+  .flip-card-front .flip-card-title {
     display: none !important;
   }
 
