@@ -381,6 +381,7 @@ a:hover {
   align-items: center;
   padding: 2rem;
   text-align: left;
+  pointer-events: none;
 }
 
 .flip-card-back h4 {
