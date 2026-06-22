@@ -19,10 +19,11 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#cv">Research</a></li>
+          <li><a href="#publications">Presentations</a></li>
           <li><a href="#ai">Projects</a></li>
           <li><a href="#about">About Me</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="Resume(Jan2026).pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
+          <li><a href="Resume(June2026).pdf" target="_blank">Resume <span class="pdf-tag">PDF</span></a></li>
         </ul>
       </nav>
     </div>
@@ -34,7 +35,7 @@
       <p>PORTFOLIO</p>
       <img src="images/LinkedIn_headshot.jpg" alt="Hailey Reed Headshot" class="headshot-img">
       <h1>Hailey Reed</h1>
-      <p>Undergrad | Computational Data Analytics</p>
+      <p>Computer Vision Researcher<br>M.S. Computer Science Student, NYU Courant</p>
     </div>
   </section>
 
@@ -43,22 +44,143 @@
     <h2 class="custom-heading">Research</h2>
   </section>
 
+  <!-- Computer Vision Subsection -->
+  <h3 class="subsection-heading">Computer Vision</h3>
+
   <!-- DeltaSegment Project -->
   <section class="subpage-project">
     <div class="project-text">
       <h4>DeltaSegment</h4>
       <h5>Multi-Fidelity Medical Image Segmentation via Change Detection</h5>
-      <p>DeltaSegment is a research project that reframes medical image segmentation as a multi-fidelity change detection problem, designed for settings where labeled medical data are scarce and expensive to obtain. Instead of relying on large annotation budgets, the method pairs each high-fidelity medical image with a low-fidelity counterpart generated via color quantization. These paired inputs are processed by a Semi-Siamese neural network, after which the difference between their learned feature representations is passed to a downstream convolutional network to generate the final segmentation.</p>
-      <p>This architecture encourages the model to focus on structural differences and boundary information revealed through multi-fidelity comparisons, rather than relying solely on appearance cues in high-fidelity images. Built on a U-Net backbone, the design enables data-efficient learning without additional data collection or pretraining, making it well-suited for small-dataset medical imaging tasks.</p>
-      <p>DeltaSegment was evaluated on three widely used histopathology benchmarks (GlaS, MoNuSeg, and TNBC), where it achieves consistent improvements in Dice and IoU over strong CNN- and transformer-based baselines. The work includes extensive ablation studies analyzing feature fusion strategies, low-fidelity construction methods, and resolution trade-offs.</p>
-      <p>This work was conducted in the Scientific & Computational Machine Learning Laboratory (SciMaLL) at the University of Connecticut and has been submitted to the IEEE International Symposium on Biomedical Imaging (ISBI) 2026 (under review).</p>
-      <a href="DeltaSegment_ISBI_Submitted.pdf" target="_blank">Preprint (submitted to IEEE ISBI 2026)</a>
+
+      <h5>Overview</h5>
+      <p>DeltaSegment is a computer vision framework for medical image segmentation that reframes segmentation as a change-detection problem. The project was motivated by a common challenge in biomedical imaging: obtaining large, high-quality annotated datasets is expensive and time-consuming.</p>
+      <p>Rather than relying solely on fully annotated medical images, DeltaSegment leverages paired high-fidelity and low-fidelity image representations. Low-fidelity images are generated through color quantization and paired with their original counterparts. A Semi-Siamese U-Net architecture learns differences between these representations and uses those differences as a boundary-aware signal for segmentation.</p>
+      <p>This approach enables more data-efficient learning and encourages the model to focus on structural information rather than appearance alone.</p>
+
+      <details class="project-details">
+        <summary>Click to read more</summary>
+
+        <h5>My Contributions</h5>
+        <ul>
+          <li>Co-developed the DeltaSegment framework as part of the Scientific & Computational Machine Learning Laboratory (SciMaLL) at the University of Connecticut.</li>
+          <li>Designed and evaluated multiple deep learning architectures for multifidelity medical image segmentation.</li>
+          <li>Conducted training, hyperparameter tuning, cross-validation, and ablation studies.</li>
+          <li>Evaluated model performance across multiple biomedical imaging benchmarks.</li>
+          <li>Co-authored and presented the resulting research at IEEE ISBI 2026 in London, United Kingdom.</li>
+        </ul>
+
+        <h5>Results</h5>
+        <p>DeltaSegment was evaluated on several widely used histopathology segmentation datasets, including:</p>
+        <ul>
+          <li>MoNuSeg</li>
+          <li>GlaS</li>
+          <li>TNBC</li>
+        </ul>
+        <p>The framework demonstrated consistent improvements over strong convolutional and transformer-based segmentation baselines while maintaining strong performance in small-data settings.</p>
+        <p>The project explored:</p>
+        <ul>
+          <li>Multi-fidelity learning</li>
+          <li>Change detection for segmentation</li>
+          <li>Boundary-aware feature learning</li>
+          <li>Data-efficient medical imaging models</li>
+        </ul>
+
+        <h5>Publication</h5>
+        <p>Niu, Y., Reed, H. A., & Yang, Q. (2026). <em>DeltaSegment: Multifidelity Medical Image Segmentation via Change Detection</em>. Proceedings of the 2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI 2026). DOI: <a href="https://doi.org/10.1109/ISBI61048.2026.11515780" target="_blank">10.1109/ISBI61048.2026.11515780</a></p>
+
+        <h5>Conference Presentation</h5>
+        <p>IEEE International Symposium on Biomedical Imaging (ISBI 2026)<br>London, United Kingdom</p>
+        <p>This work was presented at ISBI 2026, one of the premier conferences in biomedical imaging and medical image analysis. The conference provided an opportunity to share the research with the international medical imaging and computer vision community.</p>
+      </details>
+
+      <a href="isbi26-poster_print.pdf" target="_blank">Click to view the poster I presented at the 2026 ISBI conference</a>
     </div>
-    <a href="DeltaSegment_ISBI_Submitted.pdf" target="_blank" class="project-card">
-      <div class="project-title">Preprint (submitted to IEEE ISBI 2026)</div>
-      <img src="images/Delta.png" alt="DeltaSegment">
+    <a href="isbi26-poster_print.pdf" target="_blank" class="project-card">
+      <div class="project-title">ISBI 2026 Poster</div>
+      <img src="images/delta_img.png" alt="DeltaSegment" class="contain-img">
     </a>
   </section>
+
+  <!-- Honors Thesis Project -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>Multi-Fidelity Medical Image Segmentation: Architectural Analysis and Optimization</h4>
+      <h5>UConn Honors Thesis (2026)</h5>
+
+      <h5>Overview</h5>
+      <p>Following my work on DeltaSegment and multifidelity medical image segmentation, I became interested in a broader question: what is the most effective way to incorporate multifidelity information into deep learning architectures for segmentation?</p>
+      <p>This thesis extends the original DeltaSegment framework by exploring multiple architectural approaches for modeling relationships between high-fidelity and low-fidelity image representations. Rather than focusing on a single network design, the project investigates how multifidelity information can be integrated at different stages of the segmentation pipeline and evaluates the strengths and limitations of each approach.</p>
+
+      <details class="project-details">
+        <summary>Click to read more</summary>
+
+        <h5>Research Questions</h5>
+        <ul>
+          <li>How should multifidelity information be represented within a segmentation network?</li>
+          <li>At what stage should differences between fidelity levels be introduced?</li>
+          <li>Do latent-space representations outperform direct image-space differencing?</li>
+          <li>What limitations exist in the original DeltaSegment pipeline?</li>
+          <li>How well do different architectures generalize to unseen data?</li>
+        </ul>
+
+        <h5>Methodology</h5>
+        <p>I designed and evaluated several novel architectures that incorporate multifidelity information in different ways:</p>
+        <ul>
+          <li>Semi-Siamese U-Net (baseline)</li>
+          <li>FlexibleUNet</li>
+          <li>LatentDiffUNet</li>
+          <li>MultiDiffUNet</li>
+        </ul>
+        <p>Models were trained and evaluated using extensive cross-validation on multiple biomedical image segmentation datasets. Hyperparameter optimization was performed using ASHA-based random search, and performance was assessed using Dice and F1 metrics.</p>
+
+        <h5>Key Findings</h5>
+        <ul>
+          <li>Latent-space differencing produced the strongest overall performance.</li>
+          <li>Multi-scale fusion of multifidelity information improved robustness.</li>
+          <li>The original DeltaSegment architecture showed greater susceptibility to overfitting.</li>
+          <li>Standard patch-based validation procedures may overestimate real-world deployment performance.</li>
+        </ul>
+
+        <h5>Contributions</h5>
+        <ul>
+          <li>Developed three novel multifidelity segmentation architectures.</li>
+          <li>Conducted large-scale experimental evaluation across multiple biomedical datasets.</li>
+          <li>Identified limitations in existing multifidelity segmentation pipelines.</li>
+          <li>Established architectural guidelines for future multifidelity medical imaging research.</li>
+        </ul>
+      </details>
+
+      <a href="Honors_Thesis.pdf" target="_blank">Click to read my Honors Thesis</a>
+    </div>
+    <a href="Honors_Thesis.pdf" target="_blank" class="project-card">
+      <div class="project-title">UConn Honors Thesis</div>
+      <img src="images/fid_example.png" alt="Multi-Fidelity Segmentation Example" class="contain-img">
+    </a>
+  </section>
+
+  <!-- Quantitative Finance Subsection -->
+  <h3 class="subsection-heading">Quantitative Finance</h3>
+
+  <!-- Quant Finance Project -->
+  <section class="subpage-project">
+    <div class="project-text">
+      <h4>Quant Research: GDP Nowcasting with FRED-MD</h4>
+      <h5>Time-Series Modeling and Interactive Visualization for Real-Time Economic Forecasting</h5>
+      <p>This project focuses on real-time GDP nowcasting using the FRED-MD panel of 126 monthly macroeconomic indicators, addressing the delay between economic activity and official GDP releases. Rather than relying solely on covariance-based statistical models, the work explores how neural network architectures can learn temporal dependencies, distinguish leading from lagging indicators, and adapt to realistic forecasting constraints.</p>
+      <p>I implemented and evaluated multiple neural forecasting models, including MLPs, CNNs, RNNs, LSTMs, and GRUs, using carefully constructed input sequences and real-time information sets that reflect data availability within each target quarter. Model performance is assessed under both stable and turbulent economic regimes and benchmarked against a naive persistence model and a Dynamic Factor Model (DFM). Results show that model effectiveness is highly regime-dependent, motivating adaptive or ensemble-based forecasting strategies rather than reliance on a single architecture.</p>
+      <p>In parallel, I designed and built an interactive Plotly Dash dashboard that integrates data preprocessing, sequence construction, and model evaluation into a unified visualization framework. The dashboard enables users to explore indicator behavior, examine leading versus lagging dynamics, and compare model predictions across economic conditions. This work was developed as part of a graduate-level Data Visualization and Communication course, and an accompanying paper documents the full pipeline, methodological choices, and insights from the visualization-driven analysis.</p>
+      <a href="GDP_Nowcasting.pdf" target="_blank">Data Visualization Paper</a>
+    </div>
+    <a href="GDP_Nowcasting.pdf" target="_blank" class="project-card">
+      <div class="project-title">Data Visualization Paper</div>
+      <img src="images/I.png" alt="Quant Finance">
+    </a>
+  </section>
+
+  <!-- Entrepreneurship Subsection -->
+  <h3 class="subsection-heading">Entrepreneurship</h3>
+
   <!-- LitheVision Project -->
   <section class="subpage-project">
     <div class="project-text">
@@ -75,20 +197,66 @@
     </a>
   </section>
 
-  <!-- Quant Finance Project -->
+  <!-- NSF I-Corps -->
   <section class="subpage-project">
     <div class="project-text">
-      <h4>Quant Research: GDP Nowcasting with FRED-MD</h4>
-      <h5>Time-Series Modeling and Interactive Visualization for Real-Time Economic Forecasting</h5>
-      <p>This project focuses on real-time GDP nowcasting using the FRED-MD panel of 126 monthly macroeconomic indicators, addressing the delay between economic activity and official GDP releases. Rather than relying solely on covariance-based statistical models, the work explores how neural network architectures can learn temporal dependencies, distinguish leading from lagging indicators, and adapt to realistic forecasting constraints.</p>
-      <p>I implemented and evaluated multiple neural forecasting models, including MLPs, CNNs, RNNs, LSTMs, and GRUs, using carefully constructed input sequences and real-time information sets that reflect data availability within each target quarter. Model performance is assessed under both stable and turbulent economic regimes and benchmarked against a naive persistence model and a Dynamic Factor Model (DFM). Results show that model effectiveness is highly regime-dependent, motivating adaptive or ensemble-based forecasting strategies rather than reliance on a single architecture.</p>
-      <p>In parallel, I designed and built an interactive Plotly Dash dashboard that integrates data preprocessing, sequence construction, and model evaluation into a unified visualization framework. The dashboard enables users to explore indicator behavior, examine leading versus lagging dynamics, and compare model predictions across economic conditions. This work was developed as part of a graduate-level Data Visualization and Communication course, and an accompanying paper documents the full pipeline, methodological choices, and insights from the visualization-driven analysis.</p>
-      <a href="GDP_Nowcasting.pdf" target="_blank">Data Visualization Paper</a>
+      <h4>NSF I-Corps Propelus Program (Cohort 32)</h4>
+      <p>The NSF I-Corps Propelus Program is a prestigious initiative funded by the National Science Foundation to help academic researchers evaluate the commercial potential of their technologies. As a participant in Cohort 32 of the Northeast Hub, I received training in customer discovery, value proposition development, and go-to-market strategy alongside early-stage researchers and entrepreneurs.</p>
+      <p>Through this program, I conducted dozens of interviews with industry professionals and potential customers, refining our understanding of real-world pain points and validating market need for LitheVision, our AI-driven quality control system.</p>
+      <p>This experience provided me with a strong foundation in entrepreneurial thinking, technology translation, and early-stage venture development.</p>
+      <a href="NSF_Cert.pdf" target="_blank">NSF I-Corps</a>
     </div>
-    <a href="GDP_Nowcasting.pdf" target="_blank" class="project-card">
-      <div class="project-title">Data Visualization Paper</div>
-      <img src="images/I.png" alt="Quant Finance">
+    <a href="NSF_Cert.pdf" target="_blank" class="project-card">
+      <div class="project-title">NSF I-Corps</div>
+      <img src="images/NSF_cert.png" alt="Certification of Completion">
     </a>
+  </section>
+
+  <!-- Publications & Presentations Section -->
+  <section id="publications" class="custom-section">
+    <h2 class="custom-heading">Publications & Presentations</h2>
+  </section>
+
+  <section class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <img src="images/isbi.jpg" alt="ISBI London 2026">
+        <div class="carousel-text">
+          <h4>ISBI London 2026</h4>
+          <p>Presented our research for, DeltaSegment: Multifidelity Medical Image Segmentation via Change Detection, at the IEEE International Symposium on Biomedical Imaging (ISBI 2026) in London. Shared findings on a novel multi-fidelity computer vision framework for medical image segmentation and discussed the work with researchers from academia and industry.</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/architecture.png" alt="DeltaSegment Publication">
+        <div class="carousel-text">
+          <h4>Publication: DeltaSegment</h4>
+          <p>Reed, H. A., Niu, Y., & Yang, Q. (2026). DeltaSegment: Multifidelity Medical Image Segmentation via Change Detection. Proceedings of the IEEE International Symposium on Biomedical Imaging (ISBI 2026). DOI: 10.1109/ISBI61048.2026.11515780</p>
+          <p>My first peer-reviewed publication, developed through the SciMaLL Research Laboratory at UConn. This work explores how multi-fidelity representations can improve medical image segmentation while reducing dependence on expensive annotated datasets.</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/speaking.jpg" alt="STEM Scholar Speech">
+        <div class="carousel-text">
+          <h4>STEM Scholar Speech</h4>
+          <p>Selected to present my Honors Thesis research, Multi-Fidelity Medical Image Segmentation: Architectural Analysis and Optimization, at the University of Connecticut STEM Scholar Community event. The presentation highlighted my work extending the DeltaSegment framework through novel deep learning architectures and explored strategies for improving data-efficient medical image segmentation.</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/award.jpg" alt="STEM Scholar Award">
+        <div class="carousel-text">
+          <h4>STEM Scholar Award</h4>
+          <p>Recognized by the University of Connecticut STEM Scholar Community for academic achievement, undergraduate research, and contributions to STEM education. This distinction reflects my work in computer vision research, mentorship as a Computer Science tutor, and engagement in interdisciplinary scholarship throughout my undergraduate career.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-btn carousel-prev" aria-label="Previous slide">&#8249;</button>
+    <button class="carousel-btn carousel-next" aria-label="Next slide">&#8250;</button>
+    <div class="carousel-dots">
+      <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+      <button class="carousel-dot" data-index="3" aria-label="Slide 4"></button>
+    </div>
   </section>
 
   <!-- AI/ML Projects Section -->
@@ -183,75 +351,38 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Front End Section -->
-  <section class="custom-section">
-    <h2 class="custom-heading">Front End</h2>
-  </section>
-
-  <!-- Portfolio Project -->
-  <section class="subpage-project">
-    <div class="project-text">
-      <p>I love taking on front-end projects when I have the time, as it gives me a creative and artistic outlet alongside my technical work.</p>
-      <h4>Portfolio</h4>
-      <p>This portfolio was built using HTML, JavaScript, and CSS, with additional visuals designed in Canva. I created this site to showcase my projects and skills in a more interactive and accessible way than a traditional resume or GitHub page.</p>
-      <h4>LitheVision UI</h4>
-      <p>I also created the front end for the LitheVision website, which you can find in the project section above or visit directly at https://www.lithevision.org/.</p>
-      <a href="https://github.com/haileyannreed/portfolio" target="_blank">View on GitHub</a>
-    </div>
-    <a href="https://github.com/haileyannreed/portfolio" target="_blank" class="project-card">
-      <div class="project-title">Portfolio Project</div>
-      <img src="images/web.png" alt="Portfolio Project">
-    </a>
-  </section>
-
-  <!-- Courses & Certifications Section -->
-  <section class="custom-section">
-    <h2 class="custom-heading">Courses & Certifications</h2>
-  </section>
-
-  <!-- NSF I-Corps -->
-  <section class="subpage-project">
-    <div class="project-text">
-      <h4>NSF I-Corps Propelus Program (Cohort 32)</h4>
-      <p>The NSF I-Corps Propelus Program is a prestigious initiative funded by the National Science Foundation to help academic researchers evaluate the commercial potential of their technologies. As a participant in Cohort 32 of the Northeast Hub, I received training in customer discovery, value proposition development, and go-to-market strategy alongside early-stage researchers and entrepreneurs.</p>
-      <p>Through this program, I conducted dozens of interviews with industry professionals and potential customers, refining our understanding of real-world pain points and validating market need for LitheVision, our AI-driven quality control system.</p>
-      <p>This experience provided me with a strong foundation in entrepreneurial thinking, technology translation, and early-stage venture development.</p>
-      <a href="NSF_Cert.pdf" target="_blank">NSF I-Corps</a>
-    </div>
-    <a href="NSF_Cert.pdf" target="_blank" class="project-card">
-      <div class="project-title">NSF I-Corps</div>
-      <img src="images/NSF_cert.png" alt="Certification of Completion">
-    </a>
-  </section>
-
-
-    <!-- About Me Section -->
-    <section id="about" class="custom-section">
-      <h2 class="custom-heading">About Me</h2>
-    </section>
-
-    <section class="about-section">
-      <div class="about-elements">
-        <div class="about-item">
-          <img src="images/Beach.png" alt="Lifeguard Photo">
-          <div class="about-text">
-            <h3>BEACH Lifeguard</h3>
-            <p>Outside of my research and coursework, I serve as a Lifeguard at UConn's CSE BEACH (Belonging, Engagement, and Affinity Computer Hangout), where I support the School of Computing community by tutoring undergraduate students in core computer science topics and fostering a welcoming, inclusive environment.</p>
-            <p>In this role, I also help organize faculty-student engagement events, encourage peer collaboration, and contribute to building a strong sense of belonging among CS students from diverse backgrounds.</p>
-          </div>
+    <!-- Portfolio & LitheVision UI -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="images/web.png" alt="Portfolio & LitheVision UI">
+          <div class="flip-card-title">Portfolio & LitheVision UI</div>
+          <button class="flip-btn">Tap to flip</button>
         </div>
-
-        <div class="about-item">
-          <img src="images/charlie.png" alt="My dog Charlie">
-          <div class="about-text">
-            <h3>My Dog, Charlie</h3>
-            <p>Beyond academics, I'm passionate about health and wellness. I love cooking, working out, and staying active. I also spend as much time as I can with my golden retriever puppy, Charlie (who occasionally tries to help me code 🐾).</p>
-          </div>
+        <div class="flip-card-back">
+          <h4>Portfolio</h4>
+          <p>This portfolio was built using HTML, JavaScript, and CSS, with additional visuals designed in Canva. I created this site to showcase my projects and skills in a more interactive and accessible way than a traditional resume or GitHub page.<br><strong>LitheVision UI:</strong> I also created the front end for the LitheVision website, which you can find in the project section above or visit directly at https://www.lithevision.org/.</p>
+          <a href="https://github.com/haileyannreed/portfolio" target="_blank">View on GitHub →</a>
+          <button class="flip-btn">Tap to flip back</button>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="custom-section">
+    <h2 class="custom-heading">About Me</h2>
+    <div class="about-bio-container">
+      <div class="about-bio-img-wrap">
+        <img src="images/about.jpg" alt="Hailey Reed" class="about-bio-img">
+      </div>
+      <div class="about-bio">
+        <p>Hi! I'm Hailey Reed, an incoming M.S. student in Computer Science at NYU Courant. I recently graduated from the University of Connecticut with a B.S. in Computer Science and a minor in Mathematics. During my time at UConn, I was a member of the University Honors Program and the STEM Scholar Community, worked as a tutor in the Computer Science & Engineering Help Center, and became deeply involved in research spanning computer vision, medical imaging, entrepreneurship, and quantitative finance.</p>
+        <p>My primary interests lie at the intersection of machine learning, computer vision, and medical imaging, particularly in developing data-efficient methods for real-world applications. As I begin my M.S. at NYU Courant, I am excited to continue pursuing research opportunities in AI while exploring new applications in quantitative finance and computational modeling.</p>
+      </div>
+    </div>
+  </section>
   </main>
 
   <!-- Contact Section -->
@@ -299,6 +430,60 @@
     });
 
     // Desktop hover behavior for flip cards works automatically via CSS
+
+    // Match About Me image height to the bio text block
+    function syncAboutImageHeight() {
+      const bio = document.querySelector('.about-bio');
+      const imgWrap = document.querySelector('.about-bio-img-wrap');
+      if (bio && imgWrap) {
+        imgWrap.style.height = bio.offsetHeight + 'px';
+      }
+    }
+
+    window.addEventListener('load', syncAboutImageHeight);
+    window.addEventListener('resize', syncAboutImageHeight);
+
+    // Carousel behavior
+    document.querySelectorAll('.carousel').forEach(function(carousel) {
+      const track = carousel.querySelector('.carousel-track');
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      let current = 0;
+
+      function setActiveDot(index) {
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        dots[current].classList.add('active');
+      }
+
+      function goToSlide(index) {
+        setActiveDot(index);
+        slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      }
+
+      carousel.querySelector('.carousel-prev').addEventListener('click', function() {
+        goToSlide(current - 1);
+      });
+
+      carousel.querySelector('.carousel-next').addEventListener('click', function() {
+        goToSlide(current + 1);
+      });
+
+      dots.forEach(function(dot, index) {
+        dot.addEventListener('click', function() {
+          goToSlide(index);
+        });
+      });
+
+      let scrollTimeout;
+      track.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+          const index = Math.round(track.scrollLeft / track.clientWidth);
+          setActiveDot(index);
+        }, 100);
+      });
+    });
   </script>
 </body>
 </html>
